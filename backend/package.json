@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "mapbox-gl": "^0.53.0",
-        "stickybits": "^3.6.1"
+        "stickybits": "^3.6.1",
+        "vue-router": "^3.0.2"
     }
 }

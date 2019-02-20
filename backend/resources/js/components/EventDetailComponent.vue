@@ -3,9 +3,10 @@
     <div class="row no-gutters">
       <div class="col-6 p-5">
         <h1>Lorem Ipsum</h1>
-        <p
+        <!-- <router-link :to="{ path: 'home' }">Home</router-link> -->
+        <!-- <p
           class="synopsis"
-        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eius reprehenderit ullam. Aut quia expedita a corrupti, harum, vitae odio, ducimus aliquam dignissimos sunt velit laudantium voluptate temporibus ullam obcaecati.Ex minima accusamus aliquid accusantium, pariatur, illo dicta, sunt architecto veritatis natus temporibus ipsum magnam vel sit! Molestias voluptatem, repudiandae dignissimos laudantium vel quae eveniet dolore assumenda iste corporis explicabo.</p>
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eius reprehenderit ullam. Aut quia expedita a corrupti, harum, vitae odio, ducimus aliquam dignissimos sunt velit laudantium voluptate temporibus ullam obcaecati.Ex minima accusamus aliquid accusantium, pariatur, illo dicta, sunt architecto veritatis natus temporibus ipsum magnam vel sit! Molestias voluptatem, repudiandae dignissimos laudantium vel quae eveniet dolore assumenda iste corporis explicabo.</p> -->
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut neque odio exercitationem voluptate sit praesentium possimus dignissimos et nemo quas, magnam reprehenderit ex quaerat amet minus aut ipsum obcaecati!
           Nemo explicabo amet eaque dignissimos! Autem aliquid possimus consequuntur nam reiciendis excepturi aperiam rerum ipsam, laudantium accusamus quisquam exercitationem vero corrupti ab eligendi assumenda rem at amet eos recusandae aliquam?
