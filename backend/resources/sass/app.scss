@@ -1,6 +1,8 @@
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
 
 // Variables
 @import 'variables';
@@ -8,7 +10,98 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Mapbox
+@import url('https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css');
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+.map__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 12px;
+  max-height: 100vh;
+  overflow: auto;
+  background-color: white;
+  z-index: 2;
+}
+
+.dot {
+  content: '';
+  position: absolute;
+  left: -95px;
+  transform: translateX(-50%);
+  margin-top: 3px;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 2px solid #484A45;
+  background-color: #f8f8f8;
+  transition: background-color 0.15s, border-color 0.3s ease-out;
+  // border-color: #7b9d6f;
+}
+
+.year {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.month {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 700;
+  line-height: 1.8;
+}
+/* .dot-active {
+  background-color: #7b9d6f;
+} */
+
+.testerino:hover .dot {
+  background-color: #484A45;
+  // border-color: #7b9d6f;
+}
+
+.line {
+  width: 2px;
+  background-color: #484A45;
+  left: -96px;
+  position: relative;
+}
+
+.map__container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.event__detail {
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-top: 5rem;
+    font-size: 4em;
+  }
+  p {
+    margin-top: 3rem;
+    font-family: 'Lato', sans-serif;
+  }
+  .synopsis {
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  .img {
+    max-width: 100%;
+    height: calc(100vh - 24px);
+    background: url('http://img.myconfinedspace.com/wp-content/uploads/2013/08/1375266494382.jpg');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;
+  }
+}
+
