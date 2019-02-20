@@ -10730,13 +10730,18 @@ a.text-dark:focus {
 }
 
 .event__detail p {
-  margin-top: 3rem;
+  margin-top: 4rem;
+  font-size: 1.4em;
   font-family: "Lato", sans-serif;
+}
+
+.event__detail p:last-of-type {
+  padding-bottom: 8rem;
 }
 
 .event__detail .synopsis {
   font-weight: 700;
-  font-size: 1.1em;
+  margin-top: 3rem;
 }
 
 .event__detail .img {

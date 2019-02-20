@@ -88,12 +88,16 @@
     font-size: 4em;
   }
   p {
-    margin-top: 3rem;
+    margin-top: 4rem;
+    font-size: 1.4em;
     font-family: 'Lato', sans-serif;
+    &:last-of-type {
+      padding-bottom: 8rem;
+    }
   }
   .synopsis {
     font-weight: 700;
-    font-size: 1.1em;
+    margin-top: 3rem;
   }
   .img {
     max-width: 100%;
