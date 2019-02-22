@@ -10655,6 +10655,10 @@ a.text-dark:focus {
   }
 }
 
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+} */
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -10724,24 +10728,15 @@ a.text-dark:focus {
 
 .event__detail h1 {
   font-family: "Playfair Display", serif;
-  font-weight: 700;
-  margin-top: 5rem;
-  font-size: 4em;
 }
 
 .event__detail p {
-  margin-top: 4rem;
-  font-size: 1.4em;
   font-family: "Lato", sans-serif;
+  font-weight: 300;
 }
 
 .event__detail p:last-of-type {
   padding-bottom: 8rem;
-}
-
-.event__detail .synopsis {
-  font-weight: 700;
-  margin-top: 3rem;
 }
 
 .event__detail .img {
@@ -10751,5 +10746,25 @@ a.text-dark:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.flag {
+  margin: 0;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.flag--be {
+  background-image: url("https://www.apple.com/ac/flags/1/images/be/60.png");
+}
+
+.flag--pl {
+  background-image: url("https://www.apple.com/ac/flags/1/images/pl/60.png");
 }
 

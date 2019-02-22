@@ -1,13 +1,18 @@
 <template>
   <div class="event__detail">
     <div class="row no-gutters">
-      <div class="col-6 p-5">
-        <h1>Lorem Ipsum</h1>
+      <div class="col-7 p-5">
+        <h1 class="event__title">Invasion of poland</h1>
+        <div class="event__countries">
+          <figure class="flag flag--be"></figure>
+          <figure class="flag flag--pl"></figure>
+        </div>
+        <p class="event__date">29th september 2019</p>
         <!-- <router-link :to="{ path: 'home' }">Home</router-link> -->
-        <!-- <p
-          class="synopsis"
-        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eius reprehenderit ullam. Aut quia expedita a corrupti, harum, vitae odio, ducimus aliquam dignissimos sunt velit laudantium voluptate temporibus ullam obcaecati.Ex minima accusamus aliquid accusantium, pariatur, illo dicta, sunt architecto veritatis natus temporibus ipsum magnam vel sit! Molestias voluptatem, repudiandae dignissimos laudantium vel quae eveniet dolore assumenda iste corporis explicabo.</p> -->
-        <p>
+        <p
+          class="event__synopsis"
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eius reprehenderit ullam. Aut quia expedita a corrupti, harum, vitae odio, ducimus aliquam dignissimos sunt velit laudantium voluptate temporibus ullam obcaecati.Ex minima accusamus aliquid accusantium, pariatur, illo dicta, sunt architecto veritatis natus temporibus ipsum magnam vel sit! Molestias voluptatem, repudiandae dignissimos laudantium vel quae eveniet dolore assumenda iste corporis explicabo.</p>
+        <p class="event__description">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut neque odio exercitationem voluptate sit praesentium possimus dignissimos et nemo quas, magnam reprehenderit ex quaerat amet minus aut ipsum obcaecati!
           Nemo explicabo amet eaque dignissimos! Autem aliquid possimus consequuntur nam reiciendis excepturi aperiam rerum ipsam, laudantium accusamus quisquam exercitationem vero corrupti ab eligendi assumenda rem at amet eos recusandae aliquam?
           Magni fugit iste, maxime quibusdam ab possimus ex aperiam provident ullam aliquam placeat exercitationem repudiandae eum eius assumenda, atque explicabo hic est laudantium corrupti voluptates? Quam modi blanditiis similique accusamus?
@@ -20,9 +25,45 @@
           Molestiae repellat, non quaerat, aliquid facilis unde at natus dicta voluptate voluptatum, odio quisquam rerum neque. Earum eveniet quis dolorum esse fugit unde voluptatem blanditiis, asperiores at hic porro ducimus!
         </p>
       </div>
-      <div class="col-6">
-        <div class="img"></div>
+      <div class="col-5">
+        <div class="event__img"></div>
       </div>
     </div>
   </div>
 </template>
+<style lang="scss" scoped>
+.event__detail {
+  .event__countries {
+    margin-top: 4rem;
+  }
+  .event__title {
+    font-weight: 700;
+    margin-top: 7rem;
+    font-size: 4.5em;
+  }
+  .event__description {
+    font-weight: 300;
+    margin-top: 1rem;
+  }
+  .event__synopsis {
+    font-weight: 400;
+  }
+  .event__synopsis, .event__description {
+    font-size: 1.3em;
+  }
+  .event__img {
+    max-width: 100%;
+    // height: calc(100vh - 24px);
+    height: 100vh;
+    background: url('http://img.myconfinedspace.com/wp-content/uploads/2013/08/1375266494382.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .event__date {
+    opacity: .6;
+    font-weight: 400;
+  }
+}
+</style>
+
