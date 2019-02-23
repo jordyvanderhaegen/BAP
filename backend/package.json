@@ -24,8 +24,12 @@
         "vue-template-compiler": "^2.6.6"
     },
     "dependencies": {
+        "flickity": "^2.2.0",
+        "flickity-fullscreen": "^1.1.1",
         "mapbox-gl": "^0.53.0",
+        "normalize-scss": "^7.0.1",
         "stickybits": "^3.6.1",
+        "vue-flickity": "^1.1.2",
         "vue-router": "^3.0.2"
     }
 }

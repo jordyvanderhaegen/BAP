@@ -16,8 +16,21 @@ import App from './views/App';
  */
 import EventDetailComponent from './components/EventDetailComponent';
 import Home from './views/Home';
+import Map from './views/Map';
+
+/**
+ * Components
+ */
+import Flickity from 'vue-flickity';
+import MapComponent from './components/MapComponent';
+import MapOverlayComponent from './components/MapOverlayComponent';
+import EventDetailSidebarComponent from './components/EventDetailSidebarComponent';
 
 Vue.use(VueRouter);
+Vue.component('map-component', MapComponent);
+Vue.component('map-overlay-component', MapOverlayComponent);
+Vue.component('event-detail-sidebar-component', EventDetailSidebarComponent);
+Vue.component('flickity', Flickity);
 
 const router = new VueRouter({
     mode: 'history',
@@ -29,6 +42,10 @@ const router = new VueRouter({
         {
             path: '/home',
             component: Home
+        }, 
+        {
+            path: '/map',
+            component: Map,
         }
     ]
 });

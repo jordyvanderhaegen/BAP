@@ -1,33 +1,43 @@
+// Reset
+@import '~normalize-scss/sass/normalize';
+@include normalize();
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Eczar:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900');
+
 // Variables
 @import 'variables';
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+
 // Mapbox
 @import url('https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css');
 
-/* h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-} */
+// Flickity
+// @import url('~flickity/dist/flickity.min.css');
+// @import url('~flickity-fullscreen/fullscreen.css');
+
+// Sets global fonts
+html {
+  // font-family: 'Alegreya Sans', sans-serif;
+  font: normal 16px/30px 'Alegreya Sans', sans-serif;
+}
+p {
+  letter-spacing: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Eczar', serif;
+  // font-family: 'Playfair Display', serif;
+}
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-.map__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 12px;
-  max-height: 100vh;
-  overflow: auto;
-  background-color: white;
-  z-index: 2;
 }
 
 .dot {
@@ -71,11 +81,6 @@
   background-color: #484A45;
   left: -96px;
   position: relative;
-}
-
-.map__container {
-  width: 100vw;
-  height: 100vh;
 }
 
 .event__detail {

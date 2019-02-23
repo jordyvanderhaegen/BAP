@@ -14,7 +14,7 @@ export default {
       center: [4.35, 50.85],
       zoom: 5,
       pitch: 20,
-      attributionControl: false,
+      attributionControl: false
     });
 
     map.on("load", () => {
@@ -56,4 +56,12 @@ export default {
   drawMap() {}
 };
 </script>
+<style lang="scss" scoped>
+.map__container {
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+
 
