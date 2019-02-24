@@ -17,6 +17,7 @@ import App from './views/App';
 import EventDetailComponent from './components/EventDetailComponent';
 import Home from './views/Home';
 import Map from './views/Map';
+import Intro from './views/Intro';
 
 /**
  * Components
@@ -37,7 +38,7 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            component: EventDetailComponent
+            component: Intro
         },
         {
             path: '/home',

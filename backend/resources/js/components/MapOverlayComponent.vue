@@ -10,7 +10,7 @@
   top: 0;
   width: 100%;
   height: 100vh;
-  background: url('../../../public/images/noise.jpg') center center repeat fixed;
+  background: url('../../../public/img/noise.jpg') center center repeat fixed;
   color: #fff;
   z-index: 2;
   overflow: auto;
