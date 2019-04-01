@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Planning",
+    "description": "Lorem ipsum.",
+    "coverImageIndex": 1
+  },
+  {
+    "title": "Execution",
+    "coverImageIndex": 2
+  },
+  {
+    "title": "Invasion",
+    "coverImageIndex": 3
+  },
+  {
+    "title": "Expanding",
+    "coverImageIndex": 4
+  },
+  {
+    "title": "Finalize",
+    "coverImageIndex": 5
+  }
+]
