@@ -9,7 +9,7 @@
 </style>
 
 <script>
-import Menu from '@/components/organisms/Menu.vue';
+import Menu from '@/components/templates/Menu.vue';
 
 export default {
   components: {

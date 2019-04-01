@@ -1,12 +1,12 @@
 <template>
-  <div class="o-menu">
+  <div class="t-menu">
     <MenuContent/>
     <BaseActionButton class="a-menu__btn" @click.native="$store.commit('ui/toggleMenu')"/>
   </div>
 </template>
 
 <style lang="scss">
-.o-menu {
+.t-menu {
   width: 100vw;
   height: 100vh;
   background: $background-color-primary;
@@ -20,12 +20,12 @@
 
 <script>
 import BaseActionButton from '@/components/BaseActionButton';
-import MenuContent from '@/components/molecules/MenuContent';
+import MenuContent from '@/components/organisms/MenuContent';
 import { TweenMax, Power4, TimelineMax } from 'gsap';
 import { mapState } from 'vuex';
 
 export default {
-  name: 'o-menu',
+  name: 't-menu',
   components: {
     BaseActionButton,
     MenuContent,
@@ -51,6 +51,7 @@ export default {
         ease: Power4.easeOut,
         force3D: true,
       });
+      this.menuTl.add('start');
     },
     closeMenu() {
       this.menuTl.reverse(2);

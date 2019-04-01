@@ -62,7 +62,7 @@ export default {
           }
         },
         change: (index) => {
-          console.log(index);
+          // console.log(index);
         },
       },
     });
