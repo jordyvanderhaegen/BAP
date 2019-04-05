@@ -3,7 +3,7 @@ export default {
   state: {
     menuOpen: false,
     menuTl: null,
-    menuImageIndex: null
+    menuImageIndex: null,
   },
   mutations: {
     toggleMenu(state) {
@@ -13,7 +13,7 @@ export default {
       state.menuTl = tl;
     },
     setMenuCoverImageIndex(state, index) {
-      state.menuImageIndex = index
-    }
+      state.menuImageIndex = index;
+    },
   },
 };

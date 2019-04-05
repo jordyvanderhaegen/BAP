@@ -43,12 +43,12 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     number: {
       type: Number,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>

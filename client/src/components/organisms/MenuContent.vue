@@ -13,10 +13,8 @@
 </style>
 
 <script>
-import MenuItems from '@/components/molecules/MenuItems';
-import MenuImage from '@/components/molecules/MenuImage';
-import { TweenMax, Power4 } from 'gsap';
-import { mapState } from 'vuex';
+import MenuItems from '@/components/molecules/MenuItems.vue';
+import MenuImage from '@/components/molecules/MenuImage.vue';
 
 export default {
   name: 'm-menu-content',

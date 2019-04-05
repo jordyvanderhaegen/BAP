@@ -1,7 +1,7 @@
 <template>
   <div class="m-menu__image" ref="menuImage">
     <EventImage
-      :image="coverImage"
+      :imageIndex="coverImageIndex"
     />
     <!-- <div class="m-menu__image-cover" ref="cover"></div> -->
   </div>
@@ -23,18 +23,19 @@
 </style>
 
 <script>
-import EventImage from '@/components/molecules/EventImage';
+import EventImage from '@/components/molecules/EventImage.vue';
 import { mapState, mapGetters } from 'vuex';
+import { TweenMax, Power4 } from 'gsap';
 
 export default {
   name: 'm-menu-image',
   components: {
-    EventImage
+    EventImage,
   },
   data() {
     return {
-      coverImage: null
-    }
+      coverImageIndex: null,
+    };
   },
   computed: {
     ...mapState('chapters', ['chapters']),
@@ -42,15 +43,15 @@ export default {
     ...mapGetters('chapters', ['getImageByIndex']),
   },
   watch: {
-    menuOpen (open) {
+    menuOpen(open) {
       if (open) this.addAnimation();
     },
-    menuImageIndex (index) {
-      this.coverImage = this.getImageByIndex(index)
-    }
+    menuImageIndex(index) {
+      this.coverImageIndex = index;
+    },
   },
   created() {
-    this.$store.commit('ui/setMenuCoverImageIndex', this.chapters[0].coverImageIndex)
+    this.coverImageIndex = this.chapters[0].coverImageIndex;
   },
   mounted() {
     TweenMax.set(this.$refs.menuImage, {
@@ -66,7 +67,7 @@ export default {
         force3D: true,
         ease: Power4.easeOut,
       }, 'start');
-    }
-  }
-}
+    },
+  },
+};
 </script>

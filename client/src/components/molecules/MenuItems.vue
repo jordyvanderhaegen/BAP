@@ -23,29 +23,29 @@
 </style>
 
 <script>
-import MenuItem from '@/components/atoms/MenuItem';
+import MenuItem from '@/components/atoms/MenuItem.vue';
 import { TweenMax, Power4 } from 'gsap';
 import { mapState } from 'vuex';
 
 export default {
   name: 'm-menu-items',
   components: {
-    MenuItem
+    MenuItem,
   },
   computed: {
     ...mapState('chapters', ['chapters']),
     ...mapState('ui', ['menuOpen', 'menuTl']),
     elements() {
-      return this.$refs.menuItem.map(item => item.$el)
+      return this.$refs.menuItem.map(item => item.$el);
     },
   },
   watch: {
     menuOpen(open) {
-      if (open) this.addAnimation()
-    }
+      if (open) this.addAnimation();
+    },
   },
   mounted() {
-    TweenMax.set(this.elements , {
+    TweenMax.set(this.elements, {
       yPercent: 200,
       opacity: 0,
     });
@@ -58,7 +58,7 @@ export default {
         force3D: true,
         ease: Power4.easeOut,
       }, 0.08, 'start');
-    }
-  }
-}
+    },
+  },
+};
 </script>

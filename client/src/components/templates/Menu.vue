@@ -19,8 +19,8 @@
 </style>
 
 <script>
-import BaseActionButton from '@/components/BaseActionButton';
-import MenuContent from '@/components/organisms/MenuContent';
+import BaseActionButton from '@/components/BaseActionButton.vue';
+import MenuContent from '@/components/organisms/MenuContent.vue';
 import { TweenMax, Power4, TimelineMax } from 'gsap';
 import { mapState } from 'vuex';
 
