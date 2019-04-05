@@ -34,8 +34,8 @@ export default {
     },
     date: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>

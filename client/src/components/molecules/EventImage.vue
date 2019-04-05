@@ -23,14 +23,21 @@
 
 <script>
 import EventImageCaption from '@/components/atoms/EventImageCaption.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'a-event-image',
   props: {
-    image: {
-      type: Object,
-      required: true
-    }
+    imageIndex: {
+      type: Number,
+      required: true,
+    },
+  },
+  computed: {
+    ...mapGetters('chapters', ['getImageByIndex']),
+    image() {
+      return this.getImageByIndex(this.imageIndex);
+    },
   },
   components: {
     EventImageCaption,

@@ -7,13 +7,11 @@
 </style>
 
 <script>
-import AppEventImage from '@/components/AppEventImage.vue';
 import Event from '@/components/templates/Event.vue';
 
 export default {
   name: 'event-detail',
   components: {
-    AppEventImage,
     Event,
   },
   data() {
