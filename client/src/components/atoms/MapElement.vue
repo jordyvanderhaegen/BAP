@@ -26,16 +26,18 @@
 
 <script>
 import mapboxgl from 'mapbox-gl';
-import { Deck } from '@deck.gl/core';
+import { Deck, FlyToInterpolator } from '@deck.gl/core';
 import { ScatterplotLayer } from '@deck.gl/layers';
 import * as d3 from 'd3';
 import { mapState } from 'vuex';
 import * as moment from 'moment';
+import dateviewpoints from '@/assets/data/map.json';
 
 export default {
   name: 'a-mapbox',
   data() {
     return {
+      activeId: 1,
       troops: [],
       deckLayers: [],
       deck: null,
@@ -140,7 +142,7 @@ export default {
         getPosition: d => [d.geometry.coordinates[0], d.geometry.coordinates[1], 0],
         getFillColor: d => this.getTroopsColor(d.properties.country),
         pickable: true,
-        onHover: this.updateToolTip,
+        onClick: this.updateToolTip,
       });
     },
     getTroopsColor(name) {
@@ -171,9 +173,21 @@ export default {
     async loadTroops() {
       console.log(this.startDate.format('DD-MM-YY'))
       await this.$store.dispatch('troops/setTroops', [this.startDate.format('DD-MM-YY'), this.startDate.add(1, 'day').format('DD-MM-YY')])
+      const view = {
+          latitude: 49.257969,
+          longitude: -1,
+          zoom: 10,
+          transitionInterpolator: new FlyToInterpolator(),
+          transitionDuration: 2000
+        }
+        
+        console.log('setting viewstate')
         this.setTroops()
         this.deckLayers.push(this.addScatterplotLayer('1', this.troops));
         this.startAnimation();
+        this.deck.setProps({
+          viewState: view
+        })
     },
   },
 };
