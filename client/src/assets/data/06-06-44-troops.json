@@ -1,0 +1,27 @@
+{
+"type": "FeatureCollection",
+"name": "06-06-44-troops",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 19, "name": "709th Static Infantry Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -1.470726878296757, 49.517923354627079 ] } },
+{ "type": "Feature", "properties": { "id": 7, "name": "243rd Static Infantry Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -1.634225364475885, 49.397084678480446 ] } },
+{ "type": "Feature", "properties": { "id": 13, "name": "4th Infantry Division", "country": "US", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -1.190954022414815, 49.417459563578213 ] } },
+{ "type": "Feature", "properties": { "id": 26, "name": "91st Infantry Division", "country": "GE", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -1.247263836736135, 49.296999004164746 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "245th Infantry Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -1.194629085286045, 49.138463532787256 ] } },
+{ "type": "Feature", "properties": { "id": 42, "name": "352nd Infantry Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -1.085714603930134, 49.194713079520781 ] } },
+{ "type": "Feature", "properties": { "id": 53, "name": "115th Infantry Regiment", "country": "US", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.947669485800231, 49.394129467758638 ] } },
+{ "type": "Feature", "properties": { "id": 54, "name": "116th Infantry Regiment", "country": "US", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.916201152243344, 49.38447204854085 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "16th Infantry Regiment", "country": "US", "front": null }, "geometry": { "type": "Point", "coordinates": [ -0.866170095480011, 49.362754440497525 ] } },
+{ "type": "Feature", "properties": { "id": 56, "name": "231st Brigade", "country": "UK", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.659981497909908, 49.344484479053463 ] } },
+{ "type": "Feature", "properties": { "id": 57, "name": "69th Infantry Brigade", "country": "UK", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.50003372553016, 49.335593935990389 ] } },
+{ "type": "Feature", "properties": { "id": 58, "name": "7th Canadian Infantry Brigade", "country": "CA", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.446970483508442, 49.33114806215027 ] } },
+{ "type": "Feature", "properties": { "id": 59, "name": "8th Canadian Infantry Brigade", "country": "CA", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.405277936205664, 49.322749204852848 ] } },
+{ "type": "Feature", "properties": { "id": 33, "name": "716th Static Infantry Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -0.38403563520166, 49.166350210927028 ] } },
+{ "type": "Feature", "properties": { "id": 1, "name": "101st Airborne Division", "country": "US", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -1.252080858335371, 49.310837560739586 ] } },
+{ "type": "Feature", "properties": { "id": 17, "name": "6th Airborne Division", "country": "UK", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.208509188183859, 49.233299179935543 ] } },
+{ "type": "Feature", "properties": { "id": 35, "name": "LXXXIV Army Corps", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -1.077527752680852, 49.114542869413654 ] } },
+{ "type": "Feature", "properties": { "id": 32, "name": "21st Panzer Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -0.348104510770526, 49.205251126394018 ] } },
+{ "type": "Feature", "properties": { "id": 88, "name": "30th Mobile Brigade", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -1.434900812265267, 49.058620365940421 ] } },
+{ "type": "Feature", "properties": { "id": 32, "name": "21st Panzer Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -0.320609502932869, 48.929375732700215 ] } }
+]
+}

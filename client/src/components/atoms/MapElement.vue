@@ -29,8 +29,8 @@ import mapboxgl from 'mapbox-gl';
 import { Deck } from '@deck.gl/core';
 import { ScatterplotLayer } from '@deck.gl/layers';
 import * as d3 from 'd3';
-import points from '@/assets/data/points.json';
-import points2 from '@/assets/data/points2.json';
+import { mapState } from 'vuex';
+import * as moment from 'moment';
 
 export default {
   name: 'a-mapbox',
@@ -41,9 +41,16 @@ export default {
       deck: null,
       currentFrame: 0,
       timer: null,
+      startDate: moment('07-06-44', 'DD-MM-YY')
     };
   },
-  mounted() {
+  computed: {
+    ...mapState('troops', ['troopPositions', 'troopNextPositions'])
+  },
+  async mounted() {
+    await this.$store.dispatch('troops/setTroops', ['06-06-44', '07-06-44'])
+    // Set the date to global state
+    // Wait till the animation is over or 1
     mapboxgl.accessToken = 'pk.eyJ1Ijoiam9yZHl2YW5kZXJoYWVnZW4iLCJhIjoiY2pydzZkNDd0MDhudTN5bWQwZXg5dDg0ZyJ9.UJtwyGNM3UlFubdMbs3kRg';
 
     const INITIAL_VIEW_STATE = {
@@ -63,17 +70,9 @@ export default {
       bearing: INITIAL_VIEW_STATE.bearing,
       pitch: INITIAL_VIEW_STATE.pitch,
     });
-
-    this.troops = points.features.map((feature) => {
-      const nextPoint = this.findFeatureByName(feature.properties.name, points2);
-      return {
-        ...feature,
-        interPolatePos: this.getInterpolation(
-          feature.geometry.coordinates,
-          nextPoint ? nextPoint.geometry.coordinates : feature.geometry.coordinates,
-        ),
-      };
-    });
+    
+    this.setTroops()
+    
     this.deckLayers.push(this.addScatterplotLayer('1', this.troops));
 
     this.deck = new Deck({
@@ -96,8 +95,24 @@ export default {
     this.startAnimation();
   },
   methods: {
-    findFeatureByName(name, dataset) {
-      return dataset.features.find(feature => feature.properties.name === name);
+    updateToolTip({x, y, object}) {
+      if(object) console.log(object.properties.name)
+    },
+    setTroops() {
+      this.troops = this.troopPositions.map((feature) => {
+        const { id, front } = feature.properties
+        const nextPoint = this.findNextFeatureById(id, front, this.troopNextPositions);
+        return {
+          ...feature,
+          interPolatePos: this.getInterpolation(
+            feature.geometry.coordinates,
+            nextPoint ? nextPoint.geometry.coordinates : feature.geometry.coordinates,
+          ),
+        };
+      });
+    },
+    findNextFeatureById(id, isFront, dataset) {
+      return dataset.find(feature => feature.properties.id == id && feature.properties.front == isFront);
     },
     getInterpolation(p1, p2) {
       return d3.geoInterpolate(p1, p2);
@@ -110,7 +125,10 @@ export default {
         this.deck.setProps({
           layers: this.addScatterplotLayer('33', [...this.troops]),
         });
-        this.currentFrame += 0.001;
+        this.currentFrame += 0.005;
+      } else {
+        this.timer.stop()
+        this.loadTroops()
       }
     },
     addScatterplotLayer(id, data) {
@@ -121,19 +139,22 @@ export default {
         radiusMinPixels: 5,
         getPosition: d => [d.geometry.coordinates[0], d.geometry.coordinates[1], 0],
         getFillColor: d => this.getTroopsColor(d.properties.country),
+        pickable: true,
+        onHover: this.updateToolTip,
       });
     },
     getTroopsColor(name) {
       const GER_COLOR = [173, 27, 27];
       const ALLIED_COLOR = [0, 35, 149];
-
+      const UK_COLOR = [32, 142, 201];
+      const CA_COLOR = [221, 215, 215];
       switch (name) {
         case 'GE':
           return GER_COLOR;
         case 'CA':
-          return ALLIED_COLOR;
+          return CA_COLOR;
         case 'UK':
-          return ALLIED_COLOR;
+          return UK_COLOR;
         case 'US':
           return ALLIED_COLOR;
         default:
@@ -146,6 +167,13 @@ export default {
       }
       this.currentFrame = 0;
       this.timer = d3.timer(this.interpolateAll);
+    },
+    async loadTroops() {
+      console.log(this.startDate.format('DD-MM-YY'))
+      await this.$store.dispatch('troops/setTroops', [this.startDate.format('DD-MM-YY'), this.startDate.add(1, 'day').format('DD-MM-YY')])
+        this.setTroops()
+        this.deckLayers.push(this.addScatterplotLayer('1', this.troops));
+        this.startAnimation();
     },
   },
 };
