@@ -1,15 +1,15 @@
 <template>
-  <div class="logo">
-    <h1 class="logo__title">Operation Overlord</h1>
+  <div class="a-logo">
+    <h1 class="a-logo__title">Operation Overlord</h1>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.logo {
+.a-logo {
   display: flex;
   align-items: center;
 }
-.logo__title {
+.a-logo__title {
   font-size: rem($font-size-base);
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;

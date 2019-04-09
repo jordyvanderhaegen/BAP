@@ -1,14 +1,12 @@
 <template>
-  <div class="navbar">
+  <div class="m-navbar">
     <AppLogo />
-    <MenuButton
-    @click.native="toggleMenu()"
-    />
+    <MenuButton @click.native="toggleMenu()" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.navbar {
+.m-navbar {
   position: fixed;
   width: 100%;
   display: flex;
@@ -22,11 +20,11 @@
 
 <script>
 import MenuButton from '@/components/atoms/MenuButton.vue';
-import AppLogo from '@/components/AppLogo.vue';
+import AppLogo from '@/components/atoms/AppLogo.vue';
 import { mapMutations } from 'vuex';
 
 export default {
-  name: 'navbar',
+  name: 'm-navbar',
   components: {
     MenuButton,
     AppLogo,
