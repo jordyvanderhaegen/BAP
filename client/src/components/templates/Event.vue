@@ -14,7 +14,6 @@
         />
       </div>
     </div>
-    <MapElement />
   </div>
 </template>
 
@@ -44,7 +43,6 @@
 <script>
 import EventImage from '@/components/molecules/EventImage.vue';
 import EventIntro from '@/components/molecules/EventIntro.vue';
-import MapElement from '@/components/atoms/MapElement.vue';
 import { mapState } from 'vuex';
 
 export default {
@@ -52,7 +50,6 @@ export default {
   components: {
     EventImage,
     EventIntro,
-    MapElement,
   },
   computed: {
     ...mapState({

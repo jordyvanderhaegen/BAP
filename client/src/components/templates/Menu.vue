@@ -40,9 +40,13 @@ export default {
     },
   },
   mounted() {
-    TweenMax.set(this.$el, {
-      x: this.$el.offsetWidth,
-    });
+    this.setMenuOffset()
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.setMenuOffset)
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.setMenuOffset)
   },
   methods: {
     openMenu() {
@@ -57,6 +61,11 @@ export default {
     closeMenu() {
       this.menuTl.reverse(2);
     },
+    setMenuOffset() {
+      TweenMax.set(this.$el, {
+        x: this.$el.offsetWidth,
+      });
+    }
   },
 };
 </script>

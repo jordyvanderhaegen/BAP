@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppNavbar />
-    <MapElement />
+    <MapContainer />
     <TimelineList />
     <TimelineToolbar />
   </div>
@@ -13,17 +13,17 @@
 
 <script>
 import TimelineList from '@/components/molecules/TimelineList.vue';
-import MapElement from '@/components/atoms/MapElement.vue';
+import MapContainer from '@/components/molecules/MapContainer.vue';
 import TimelineToolbar from '@/components/molecules/TimelineToolbar.vue';
-import AppNavbar from '@/components/AppNavbar.vue';
+import AppNavbar from '@/components/molecules/AppNavbar.vue';
 
 export default {
   name: 'home-view',
   components: {
     TimelineList,
     TimelineToolbar,
-    MapElement,
-    AppNavbar
+    MapContainer,
+    AppNavbar,
   }
 }
 </script>

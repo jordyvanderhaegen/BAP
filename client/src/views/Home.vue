@@ -37,9 +37,9 @@
 
 
 <script>
-import AppNavbar from '@/components/AppNavbar.vue';
+import AppNavbar from '@/components/molecules/AppNavbar.vue';
 import AppCarousel from '@/components/AppCarousel.vue';
-import TimelineList from '@/components/TimelineList.vue';
+import TimelineList from '@/components/molecules/TimelineList.vue';
 import CarouselList from '@/components/CarouselList.vue';
 
 export default {
