@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <AppLogo />
-    <BaseActionButton
+    <MenuButton
     @click.native="toggleMenu()"
     />
   </div>
@@ -10,23 +10,25 @@
 <style lang="scss" scoped>
 .navbar {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.9rem;
+  padding: 3.2rem;
+  z-index: layer('header');
+  pointer-events: none;
 }
 </style>
 
 <script>
-import BaseActionButton from '@/components/BaseActionButton.vue';
+import MenuButton from '@/components/atoms/MenuButton.vue';
 import AppLogo from '@/components/AppLogo.vue';
 import { mapMutations } from 'vuex';
 
 export default {
   name: 'navbar',
   components: {
-    BaseActionButton,
+    MenuButton,
     AppLogo,
   },
   methods: {
