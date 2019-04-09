@@ -56,9 +56,9 @@
 { "type": "Feature", "properties": { "id": 33, "name": "716th Static Infantry Division", "country": "GE", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.45575067202161, 49.168409990651575 ] } },
 { "type": "Feature", "properties": { "id": 45, "name": "3rd Parachute Division", "country": "GE", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.897581930887998, 49.07202099569615 ] } },
 { "type": "Feature", "properties": { "id": 34, "name": "12th Panzer Division", "country": "GE", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.589103379243101, 49.156853201737725 ] } },
-{ "type": "Feature", "properties": { "id": 46, "name": "2nd Panzer Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -0.755660375009703, 49.076932597808749 ] } },
-{ "type": "Feature", "properties": { "id": 47, "name": "77th Infantry Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -1.4644648248396, 49.457672054912827 ] } },
-{ "type": "Feature", "properties": { "id": 48, "name": "30th Infantry Division", "country": "US", "front": null }, "geometry": { "type": "Point", "coordinates": [ -0.915522957763179, 49.378934990469617 ] } },
-{ "type": "Feature", "properties": { "id": 49, "name": "XIX Corps", "country": "US", "front": null }, "geometry": { "type": "Point", "coordinates": [ -1.071368892708777, 49.379632332695309 ] } }
+{ "type": "Feature", "properties": { "id": 46, "name": "2nd Panzer Division", "country": "GE", "front": 0 }, "geometry": { "type": "Point", "coordinates": [ -0.755660375009703, 49.076932597808749 ] } },
+{ "type": "Feature", "properties": { "id": 47, "name": "77th Infantry Division", "country": "GE", "front": 0 }, "geometry": { "type": "Point", "coordinates": [ -1.4644648248396, 49.457672054912827 ] } },
+{ "type": "Feature", "properties": { "id": 48, "name": "30th Infantry Division", "country": "US", "front": 0 }, "geometry": { "type": "Point", "coordinates": [ -0.915522957763179, 49.378934990469617 ] } },
+{ "type": "Feature", "properties": { "id": 49, "name": "XIX Corps", "country": "US", "front": 0 }, "geometry": { "type": "Point", "coordinates": [ -1.071368892708777, 49.379632332695309 ] } }
 ]
 }

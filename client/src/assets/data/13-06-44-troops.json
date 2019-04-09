@@ -56,8 +56,8 @@
 { "type": "Feature", "properties": { "id": 44, "name": "715th Infantry Division", "country": "GE", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.374614386302511, 49.160355543791567 ] } },
 { "type": "Feature", "properties": { "id": 45, "name": "3rd Parachute Division", "country": "GE", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.902669684777975, 49.075003097751626 ] } },
 { "type": "Feature", "properties": { "id": 34, "name": "12th Panzer Division", "country": "GE", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.578660094942624, 49.175237734612878 ] } },
-{ "type": "Feature", "properties": { "id": 46, "name": "2nd Panzer Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -0.635964270334992, 49.045174021226302 ] } },
-{ "type": "Feature", "properties": { "id": 47, "name": "77th Infantry Division", "country": "GE", "front": null }, "geometry": { "type": "Point", "coordinates": [ -1.566755455680181, 49.405775523506428 ] } },
+{ "type": "Feature", "properties": { "id": 46, "name": "2nd Panzer Division", "country": "GE", "front": 0 }, "geometry": { "type": "Point", "coordinates": [ -0.635964270334992, 49.045174021226302 ] } },
+{ "type": "Feature", "properties": { "id": 47, "name": "77th Infantry Division", "country": "GE", "front": 0 }, "geometry": { "type": "Point", "coordinates": [ -1.566755455680181, 49.405775523506428 ] } },
 { "type": "Feature", "properties": { "id": 88, "name": "30th Mobile Brigade", "country": "GE", "front": 1 }, "geometry": { "type": "Point", "coordinates": [ -0.997451611149935, 49.11064788345606 ] } }
 ]
 }
