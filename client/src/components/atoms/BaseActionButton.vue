@@ -1,5 +1,5 @@
 <template>
-  <div class="a-btn a-btn__action">
+  <div :class="['a-btn a-btn__action', {'a-btn__action--active': active}]">
     <slot />
   </div>
 </template>
@@ -23,4 +23,25 @@
     }
   }
 }
+.a-btn__action--active {
+  background-color: $background-color-secondary;
+  svg {
+    fill: rgba($background-color-primary, .7);
+    stroke: rgba($background-color-primary, .7);
+  }
+}
 </style>
+
+<script>
+export default {
+  name: 'a-btn-action',
+  props: {
+    active: {
+      type: Boolean,
+      required: false,
+      default: false,
+    }
+  }
+}
+</script>
+

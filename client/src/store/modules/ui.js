@@ -4,6 +4,7 @@ export default {
     menuOpen: false,
     menuTl: null,
     menuImageIndex: null,
+    timelineToolbarModalOpen: false,
   },
   mutations: {
     toggleMenu(state) {
@@ -14,6 +15,9 @@ export default {
     },
     setMenuCoverImageIndex(state, index) {
       state.menuImageIndex = index;
+    },
+    toggleMenuToolbarModal(state) {
+      state.timelineToolbarModalOpen = !state.timelineToolbarModalOpen;
     },
   },
 };

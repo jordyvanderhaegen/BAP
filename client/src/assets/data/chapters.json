@@ -1,22 +1,31 @@
 [
   {
+    "id": 1,
     "title": "Planning",
     "description": "Lorem ipsum.",
-    "coverImageIndex": 1
+    "coverImageIndex": 1,
+    "unitPosRange": [1, 8]
   },
   {
+    "id": 2,
     "title": "Execution",
-    "coverImageIndex": 2
+    "coverImageIndex": 2,
+    "unitPosRange": [9, 12]
   },
   {
+    "id": 3,
     "title": "Invasion",
-    "coverImageIndex": 3
+    "coverImageIndex": 3,
+    "unitPosRange": [13, 20]
   },
   {
+    "id": 4,
     "title": "Expanding",
-    "coverImageIndex": 4
+    "coverImageIndex": 4,
+    "unitPosRange": [21, 26]
   },
   {
+    "id": 5,
     "title": "Finalize",
     "coverImageIndex": 5
   }

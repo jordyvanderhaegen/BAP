@@ -1,8 +1,8 @@
 <template>
-  <BaseActionButton>
+  <BaseActionButton :active="active">
     <svg
       version="1.1"
-      class="a-icon__options"
+      :class="['a-icon__options', {'a-icon__options--active': active}]"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       x="0px"
@@ -30,6 +30,9 @@
     transform: rotate(90deg);
   }
 }
+.a-icon__options--active {
+  transform: rotate(90deg);
+}
 </style>
 
 
@@ -40,6 +43,13 @@ export default {
   name: "a-btn-options",
   components: {
     BaseActionButton
+  },
+  props: {
+    active: {
+      type: Boolean,
+      required: false,
+      default: false,
+    }
   }
 };
 </script>
