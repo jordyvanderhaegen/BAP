@@ -2,10 +2,11 @@
   <div class="a-event__image-caption">
     <h4 class="a-event__image-caption-title">{{ location }}</h4>
     <p class="a-event__image-caption-description">{{ date }}</p>
+    <p class="a-event__image-caption-copyright">© {{ copyright }}</p>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .a-event__image-caption {
   padding: 1.15rem;
   margin: 1.15rem;
@@ -22,6 +23,11 @@
   font-weight: 300;
   font-size: rem($font-size-small);
 }
+.a-event__image-caption-copyright {
+  font-weight: 300;
+  padding-top: 10px;
+  font-size: rem(10px);
+}
 </style>
 
 <script>
@@ -36,6 +42,10 @@ export default {
       type: String,
       required: true,
     },
+    copyright: {
+      type: String,
+      required: true
+    }
   },
 };
 </script>

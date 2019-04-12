@@ -1,11 +1,12 @@
 <template>
   <div
-    :style="{backgroundImage: `url(${image.src})`}"
+    :style="{backgroundImage: `url(${imageSrc})`}"
     class="m-event__image"
   >
     <EventImageCaption
       :location="image.location"
       :date="image.date"
+      :copyright="`${image.origin.source} - ${image.origin.id}`"
     />
   </div>
 </template>
@@ -38,6 +39,13 @@ export default {
     image() {
       return this.getImageByIndex(this.imageIndex);
     },
+    imageSrc() {
+      if (this.image.localSrc) {
+        return require('@/assets/img/'+ this.image.localSrc)
+      } else {
+        return this.image.src
+      }
+    }
   },
   components: {
     EventImageCaption,

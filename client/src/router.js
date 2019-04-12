@@ -3,6 +3,8 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import HomeView from './views/HomeView.vue';
 import EventDetail from './views/EventDetail.vue';
+import UnitDetail from './views/UnitDetail.vue';
+import PageNotFoundView from './views/PageNotFoundView.vue';
 
 Vue.use(Router);
 
@@ -19,6 +21,16 @@ export default new Router({
       name: 'event',
       component: EventDetail,
     },
+    {
+      path: '/unit/:id',
+      name: 'unit',
+      component: UnitDetail,
+    },
+    { 
+      path: "*",
+      name: 'not-found',
+      component: PageNotFoundView
+    }
     /* {
       path: '/about',
       name: 'about',
