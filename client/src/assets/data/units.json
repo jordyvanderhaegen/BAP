@@ -1,0 +1,964 @@
+[
+ {
+   "name": "100th Independent Panzer Brigade",
+   "country": "GE",
+   "id": 84,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "101st Airborne Division",
+   "country": "US",
+   "id": 1,
+   "page_id": 113453,
+   "page_title": "101st_Airborne_Division",
+   "sections": "4",
+   "coverImage": 11,
+   "images": [6, 11, 13, 12, 14, 15]
+ },
+ {
+   "name": "1057th Grenadier Regiment",
+   "country": "GE",
+   "id": 2,
+   "page_id": 1707582,
+   "page_title": "",
+   "sections": [1]
+ },
+ {
+   "name": "1058th Grenadier Regiment",
+   "country": "GE",
+   "id": 3,
+   "page_id": 1707582,
+   "page_title": "",
+   "sections": [1]
+ },
+ {
+   "name": "10th SS Panzer Division Frundsberg",
+   "country": "GE",
+   "id": 113,
+   "page_id": 2016545,
+   "page_title": "10th_SS_Panzer_Division_Frundsberg",
+   "sections": [1]
+ },
+ {
+   "name": "115th Infantry Regiment",
+   "country": "US",
+   "id": 53,
+   "page_id": 2019987,
+   "page_title": "115th_Infantry_Regiment_(United_States)",
+   "sections": [16],
+   "coverImage": 16,
+   "images": [16,17]
+ },
+ {
+   "name": "116th Infantry Regiment",
+   "country": "US",
+   "id": 54,
+   "page_id": 23472445,
+   "page_title": "116th_Infantry_Regiment_(United_States)",
+   "sections": [8],
+   "coverImage": 18,
+   "images": [18]
+ },
+ {
+   "name": "11th Armoured Division",
+   "country": "UK",
+   "id": 50,
+   "page_id": 3413811,
+   "page_title": "11th_Armoured_Division_(United_Kingdom)",
+   "sections": [3,4,5],
+   "coverImage": 21,
+   "images": [20, 21]
+ },
+ {
+   "name": "125th Panzer Grenadier Regiment",
+   "country": "GE",
+   "id": 70,
+   "page_id": 1686395,
+   "page_title": "125th_Infantry_Division_(Wehrmacht)",
+   "sections": []
+ },
+ {
+   "name": "12th Infantry Regiment",
+   "country": "US",
+   "id": 75,
+   "page_id": 3419709,
+   "page_title": "12th_Infantry_Regiment_(United_States)",
+   "sections": [7]
+ },
+ {
+   "name": "12th Panzer Division",
+   "country": "GE",
+   "id": 34,
+   "page_id": 1730316,
+   "page_title": "12th_Panzer_Division_(Wehrmacht)",
+   "sections": []
+ },
+ {
+   "name": "151st Infantry Brigade",
+   "country": "UK",
+   "id": 62,
+   "page_id": 5018091,
+   "page_title": "151st_Infantry_Brigade_(United_Kingdom)",
+   "sections": [15,16],
+   "coverImage": 23,
+   "images":[22, 23]
+
+ },
+ {
+   "name": "15th (Scottish) Infantry Division",
+   "country": "UK",
+   "id": 51,
+   "page_id": 485504,
+   "page_title": "15th_(Scottish)_Infantry_Division",
+   "sections": [4],
+   "coverImage": 24,
+   "images":[24, 25, 26]
+ },
+ {
+   "name": "16th Infantry Regiment",
+   "country": "US",
+   "id": 55,
+   "page_id": 11161023,
+   "page_title": "16th_Infantry_Regiment_(United_States)",
+   "sections": [7],
+   "coverImage": 27,
+   "images":[27,28,29,30]
+ },
+ {
+   "name": "175th Infantry Regiment",
+   "country": "US",
+   "id": 77,
+   "page_id": null,
+   "page_title": "175th_Infantry_Regiment_(United_States)",
+   "sections": []
+ },
+ {
+   "name": "17th Panzer Division",
+   "country": "GE",
+   "id": 41,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "185th Infantry Brigade",
+   "country": "UK",
+   "id": 65,
+   "page_id": null,
+   "page_title": "185th_Infantry_Brigade_(United_Kingdom)",
+   "sections": [1],
+   "coverImage": 32,
+   "images": [31, 32]
+ },
+ {
+   "name": "18th Infantry Regiment",
+   "country": "US",
+   "id": 78,
+   "page_id": null,
+   "page_title": "18th_Infantry_Regiment_(United_States)",
+   "sections": [4]
+ },
+ {
+   "name": "191st Mountain Artillery Regiment",
+   "country": "GE",
+   "id": 4,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "192nd Panzer Grenadier Regiment",
+   "country": "GE",
+   "id": 86,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "1st Infantry Division",
+   "country": "US",
+   "id": 5,
+   "page_id": null,
+   "page_title": "1st_Infantry_Division_(United_States)",
+   "sections": [1],
+   "coverImage": 28,
+   "images": [28, 35]
+ },
+ {
+   "name": "1st SS Panzer Division Leibstandarte SS Adolf Hitler",
+   "country": "GE",
+   "id": 105,
+   "page_id": null,
+   "page_title": "1st_SS_Panzer_Division_Leibstandarte_SS_Adolf_Hitler",
+   "sections": [12],
+   "coverImage": 43,
+   "images": [40, 41, 42, 43, 44, 45]
+ },
+ {
+   "name": "21st Army Group",
+   "country": "UK",
+   "id": 6,
+   "page_id": null,
+   "page_title": "21st_Army_Group",
+   "sections": [2],
+   "coverImage": 36,
+   "images":[36, 37, 38, 39]
+ },
+ {
+   "name": "21st Panzer Division",
+   "country": "GE",
+   "id": 32,
+   "page_id": null,
+   "page_title": "21st_Panzer_Division_(Wehrmacht)",
+   "sections": [3]
+   
+ },
+ {
+   "name": "22nd Infantry Regiment",
+   "country": "US",
+   "id": 76,
+   "page_id": null,
+   "page_title": "22nd_Infantry_Regiment_(United_States)",
+   "sections": [8],
+   "coverImage": 6,
+   "images": [6,7,8,9,10]
+ },
+ {
+   "name": "231st Brigade",
+   "country": "UK",
+   "id": 56,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "243rd Static Infantry Division",
+   "country": "GE",
+   "id": 7,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "245th Infantry Division",
+   "country": "GE",
+   "id": 87,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "25th SS Panzergrenadier Regiment",
+   "country": "GE",
+   "id": 85,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "265th Infantry Division",
+   "country": "GE",
+   "id": 89,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "266th Infantry Division",
+   "country": "GE",
+   "id": 108,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "26th Infantry Regiment",
+   "country": "US",
+   "id": 79,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "275th Infantry Division",
+   "country": "GE",
+   "id": 90,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "27th Armoured Brigade",
+   "country": "UK",
+   "id": 66,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "29th Infantry Division",
+   "country": "US",
+   "id": 8,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "2nd Armored Division",
+   "country": "US",
+   "id": 9,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "2nd Canadian Armoured Brigade",
+   "country": "CA",
+   "id": 81,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "2nd Infantry Division",
+   "country": "US",
+   "id": 10,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "2nd Panzer Division",
+   "country": "GE",
+   "id": 46,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "2nd SS Panzer Division Das Reich",
+   "country": "GE",
+   "id": 96,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "30th Infantry Division",
+   "country": "US",
+   "id": 48,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "30th Mobile Brigade",
+   "country": "GE",
+   "id": 88,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "319th Static Infantry Division",
+   "country": "GE",
+   "id": 93,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "343rd Infantry Division",
+   "country": "GE",
+   "id": 114,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "346th Infantry Division",
+   "country": "GE",
+   "id": 97,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "352nd Infantry Division",
+   "country": "GE",
+   "id": 42,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "353rd Infantry Division",
+   "country": "GE",
+   "id": 98,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "356th Infantry Division",
+   "country": "GE",
+   "id": 71,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "3rd Armored Division",
+   "country": "US",
+   "id": 104,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "3rd Canadian Infantry Division",
+   "country": "CA",
+   "id": 11,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "3rd Infantry Division",
+   "country": "UK",
+   "id": 12,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "3rd Parachute Brigade",
+   "country": "UK",
+   "id": 67,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "3rd Parachute Division",
+   "country": "GE",
+   "id": 45,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "43rd (Wessex) Infantry Division",
+   "country": "UK",
+   "id": 100,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "49th Infantry Division",
+   "country": "UK",
+   "id": 37,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "4th Infantry Division",
+   "country": "US",
+   "id": 13,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "4th Parachute Regiment",
+   "country": "GE",
+   "id": 43,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "501st Infantry Regiment",
+   "country": "US",
+   "id": 107,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "50th Infantry Division",
+   "country": "UK",
+   "id": 14,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "51st Infantry Division",
+   "country": "UK",
+   "id": 15,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "53rd (Welsh) Infantry Division",
+   "country": "UK",
+   "id": 110,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "56th Infantry Brigade",
+   "country": "UK",
+   "id": 61,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "59th (Staffordshire) Infantry Division",
+   "country": "UK",
+   "id": 109,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "5th Armored Division",
+   "country": "US",
+   "id": 16,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "5th Parachute Brigade",
+   "country": "UK",
+   "id": 72,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "69th Infantry Brigade",
+   "country": "UK",
+   "id": 57,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "6th Airborne Division",
+   "country": "UK",
+   "id": 17,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "6th Airlanding Brigade",
+   "country": "UK",
+   "id": 73,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "6th Parachute Regiment",
+   "country": "GE",
+   "id": 18,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "709th Static Infantry Division",
+   "country": "GE",
+   "id": 19,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "711th Infantry Division",
+   "country": "GE",
+   "id": 39,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "715th Infantry Division",
+   "country": "GE",
+   "id": 44,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "716th Static Infantry Division",
+   "country": "GE",
+   "id": 33,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "726th Grenadier Regiment",
+   "country": "GE",
+   "id": 80,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "744th Infantry Regiment",
+   "country": "GE",
+   "id": 82,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "746th Tank Battalion",
+   "country": "US",
+   "id": 20,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "77th Infantry Division",
+   "country": "GE",
+   "id": 47,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "79th Infantry Division",
+   "country": "US",
+   "id": 52,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "7th Armoured Division",
+   "country": "UK",
+   "id": 21,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "7th Canadian Infantry Brigade",
+   "country": "CA",
+   "id": 58,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "82nd Airborne Division",
+   "country": "US",
+   "id": 22,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "83rd Infantry Division",
+   "country": "US",
+   "id": 106,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "857th Infantry Battalion",
+   "country": "GE",
+   "id": 83,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "8th Armoured Brigade",
+   "country": "UK",
+   "id": 69,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "8th Canadian Infantry Brigade",
+   "country": "CA",
+   "id": 59,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "8th Infantry Regiment",
+   "country": "US",
+   "id": 74,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "90th Infantry Division",
+   "country": "US",
+   "id": 23,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "914th Grenadier Regiment",
+   "country": "GE",
+   "id": 24,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "915th Grenadier Regiment",
+   "country": "GE",
+   "id": 63,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "916th Grenadier Regiment",
+   "country": "GE",
+   "id": 64,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "919th Grenadier Regiment",
+   "country": "GE",
+   "id": 25,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "91st Infantry Division",
+   "country": "GE",
+   "id": 26,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "9th Canadian Infantry Brigade",
+   "country": "CA",
+   "id": 68,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "9th Infantry Brigade",
+   "country": "UK",
+   "id": 60,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "9th Infantry Division",
+   "country": "US",
+   "id": 31,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "9th SS Panzer Division Hohenstaufen",
+   "country": "GE",
+   "id": 111,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "First Army",
+   "country": "US",
+   "id": 36,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "First Canadian Army",
+   "country": "CA",
+   "id": 102,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "Guards Armoured Division",
+   "country": "UK",
+   "id": 103,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "I Corps",
+   "country": "UK",
+   "id": 27,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "I SS Panzer Corps",
+   "country": "GE",
+   "id": 95,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "II Parachute Corps",
+   "country": "GE",
+   "id": 101,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "II SS Panzer Corps",
+   "country": "GE",
+   "id": 112,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "LXXXIV Army Corps",
+   "country": "GE",
+   "id": 35,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "Panzer Lehr Division",
+   "country": "GE",
+   "id": 40,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "Second Army",
+   "country": "UK",
+   "id": 38,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "V Corps",
+   "country": "US",
+   "id": 28,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "VII Corps",
+   "country": "US",
+   "id": 29,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "VIII Corps",
+   "country": "UK",
+   "id": 91,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "VIII Corps",
+   "country": "US",
+   "id": 92,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "XII Corps",
+   "country": "UK",
+   "id": 99,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "XIX Corps",
+   "country": "US",
+   "id": 49,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "XLVII Panzer Corps",
+   "country": "GE",
+   "id": 94,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "XXX Corps",
+   "country": "UK",
+   "id": 30,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "276th German Infantry Division",
+   "country": "GE",
+   "id": 115,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "16th Infantry Division",
+   "country": "GE",
+   "id": 116,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ },
+ {
+   "name": "8th Infantry Division",
+   "country": "US",
+   "id": 117,
+   "page_id": null,
+   "page_title": "",
+   "sections": []
+ }
+]
