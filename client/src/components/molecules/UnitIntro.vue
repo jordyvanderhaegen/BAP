@@ -13,15 +13,9 @@
 
 <style lang="scss">
 .m-unit__intro {
-  // padding: 5.4rem;
   color: $text-color-primary;
-  /* @include to($screen-md) {
-    padding: 2.9rem;
-  }
-  @include to($screen-sm) {
-    padding: 1.45rem;
-  } */
 }
+
 .a-unit__intro-title {
   font-family: $font-family-headings;
   font-size: rem($font-size-xl);
@@ -29,6 +23,7 @@
   margin-bottom: 1.15rem;
   margin-top: 1.15rem;
 }
+
 .a-unit__intro-date {
   font-family: $font-family-headings;
   font-size: rem($font-size-medium);
@@ -36,6 +31,7 @@
   color: $text-color-secondary;
   margin-bottom: 2.3rem;
 }
+
 .a-unit__intro-description {
   font-family: $font-family-regular;
   font-size: rem($font-size-medium);
@@ -43,12 +39,14 @@
   font-weight: 300;
   margin-bottom: 2.3rem;
 }
+
 .a-unit__intro-source {
   font-family: $font-family-regular;
   font-size: rem($font-size-small);
   font-style: italic;
   color: $text-color-primary;
 }
+
 // Wikipedia
 .a-unit__intro-description {
   .box-Refimprove_section, figure, figure-inline {

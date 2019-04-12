@@ -2,6 +2,11 @@
   <div id="map" class="a-map__layer"/>
 </template>
 
+<style lang="scss">
+@import "~mapbox-gl/dist/mapbox-gl.css";
+</style>
+
+
 <script>
 import mapboxgl from 'mapbox-gl';
 import { mapMutations } from 'vuex';

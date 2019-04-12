@@ -120,8 +120,10 @@ export default {
         data: [...this.geodataCurrentDate],
         radiusScale: 10,
         radiusMinPixels: 5,
+        pickable: true,
         getPosition: d => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
         getFillColor: d => this.getUnitColor(d.properties.country),
+        onClick: d => { if(d.object) { this.$router.push(`/unit/${d.object.properties.id}`)}}
       });
     },
     getUnitColor(name) {

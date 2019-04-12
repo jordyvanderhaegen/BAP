@@ -15,7 +15,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: rem(10px);
-  padding: 2.3rem;
 
   @include at($screen-md) {
     grid-template-columns: 1fr 1fr;

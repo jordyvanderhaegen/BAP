@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <div class="l-unit-detail">
       <div class="l-unit-detail__img">
         <EventImage
@@ -24,57 +24,85 @@
         />
       </div>
     </div>
+  </div> -->
+  <div class="l-unit-detail">
+    <div class="l-unit-detail__img">
+      <EventImage
+        v-if="coverImageIndex"
+        :imageIndex="coverImageIndex"
+      />
+    </div>
+    <div class="l-unit-detail__intro">
+      <CloseButton 
+        @click.native="$router.go(-1)"
+        class="l-unit-detail__close" />
+      <UnitIntro
+        v-if="data"
+        :data="data"
+      />
+    </div>
+    <div class="l-unit-detail__images">
+      <ImageGridList
+        v-if="imageIndexes.length"
+        :images="imageIndexes"
+      />
+    </div>
   </div>
 </template>
 
 <style lang="scss">
 .l-unit-detail {
   display: flex;
-  min-height: 100vh;
+  flex-direction: column;
   flex-wrap: wrap;
 
-  @include to($screen-lg) {
-    flex-direction: column;
+  @include at($screen-lg) {
+    flex-direction: row;
   }
+
 }
 .l-unit-detail__img {
-  width: 100%;
-  padding: 0;
-  height: 85vh;
-  
+  height: 75vh;
+
   @include at($screen-lg) {
-    width: 45%;
-    padding: 5.4rem 3.2rem;
+    width: 40%;
+    padding: rem($space-xl) rem($space-md);
     height: 100vh;
   }
 
-  @include at($screen-xl) {
-    width: 35%;
-  }
-
-  
 }
+
 .l-unit-detail__intro {
-  width: 100%;
-  padding: 3.2rem;
+  padding: rem($space-md) rem($space-xs);
 
   @include at($screen-lg) {
-    width: 55%;
-    padding: 5.4rem 3.2rem;
+    padding: rem($space-md);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
   }
 
-  @include at($screen-xl) {
-    width: 65%;
-    padding: 5.4rem;
-  }
 }
-.l-unit-detail__intro-error {
-  font-size: rem($font-size-large);
-  font-family: $font-family-headings;
-  font-weight: 600;
+
+.l-unit-detail__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: rem($space-xs);
+
+  @include at($screen-lg) {
+    margin: 0;
+    position: relative;
+    align-self: flex-end;
+  }
+
 }
 .l-unit-detail__images {
   width: 100%;
+  padding: rem($space-md) 0;
+  @include at($screen-lg) {
+    padding: rem($space-md) rem($space-xs);
+  }
 }
 </style>
 
@@ -84,6 +112,7 @@ import units from '@/assets/data/units.json';
 import EventImage from '@/components/molecules/EventImage.vue';
 import ImageGridList from '@/components/molecules/ImageGridList.vue';
 import UnitIntro from '@/components/molecules/UnitIntro.vue';
+import CloseButton from '@/components/atoms/CloseButton.vue';
 import { mapState } from 'vuex';
 
 export default {
@@ -92,6 +121,7 @@ export default {
     EventImage,
     UnitIntro,
     ImageGridList,
+    CloseButton,
   },
   data() {
     return {

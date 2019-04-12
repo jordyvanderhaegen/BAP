@@ -7,7 +7,7 @@
     <PlayButton @click.native="resumeTimer()" />
     <PauseButton @click.native="pauseTimer()" />
     <RestartButton @click.native="setActiveDateId(1)" />
-    <TimelineOptionsModal v-show="timelineToolbarModalOpen"/>
+    <TimelineOptionsModal />
   </div>
 </template>
 
@@ -17,7 +17,11 @@
   right: 0;
   bottom: 11vh;
   z-index: layer('header');
-  padding: 3.2rem;
+  padding: rem($space-sm);
+
+  @include at($screen-lg) {
+    padding: rem($space-md);
+  }
   div {
     margin: 10px 0;
   }

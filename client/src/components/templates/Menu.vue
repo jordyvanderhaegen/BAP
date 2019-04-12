@@ -14,7 +14,7 @@
   right: 0;
   top: 0;
   z-index: layer("header");
-  padding: 3.2rem;
+  padding: rem($space-md);
   display: flex;
 }
 </style>

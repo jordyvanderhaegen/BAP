@@ -1,20 +1,30 @@
 <template>
-  <div class="m-timeline__modal" ref="modal">
-    <ul>
-      <li>
-        <input type="checkbox" id="camera_lock" class="m-timeline__modal-input" v-model="cameraLocked">
-        <label for="camera_lock" class="m-timeline__modal-label">Lock camera</label>
-      </li>
-      <li>
-        <input type="checkbox">
-        <label>Lock camera</label>
-      </li>
-      <li>
-        <input type="checkbox">
-        <label>Lock camera</label>
-      </li>
-    </ul>
-  </div>
+  <transition
+    @before-enter="beforeEnter"
+    @enter="enter"
+    @leave="leave"
+    mode="out-in"
+  >
+    <div
+      v-if="timelineToolbarModalOpen"
+      class="m-timeline__modal"
+    >
+      <ul>
+        <li>
+          <input type="checkbox" id="camera_lock" class="m-timeline__modal-input" v-model="cameraLocked">
+          <label for="camera_lock" class="m-timeline__modal-label">Lock camera</label>
+        </li>
+        <li>
+          <input type="checkbox">
+          <label>Lock camera</label>
+        </li>
+        <li>
+          <input type="checkbox">
+          <label>Lock camera</label>
+        </li>
+      </ul>
+    </div>
+  </transition>
 </template>
 
 <style lang="scss">
@@ -22,8 +32,6 @@
   position: absolute;
   right: 100%;
   top: 0;
-  // top: 50%;
-  // transform: translateY(-50%);
   width: 300px;
   padding: 1.6rem;
   background: rgba($background-color-primary, 0.5);
@@ -59,25 +67,22 @@ export default {
       }
     }
   },
-  watch: {
-    timelineToolbarModalOpen(open) {
-      open ? this.openModal() : this.closeModal()
-    }
-  },
-  mounted() {
-    TweenMax.set(this.$refs.modal, {
-      yPercent: 100,
-      opacity: 0,
-    });
-  },
   methods: {
-    openModal() {
-      this.animation = TweenMax.to(this.$refs.modal, .3, {
-        yPercent: 0,
-        opacity: 1
+    beforeEnter(el) {
+      TweenMax.set(el, {
+        yPercent: 100,
+        opacity: 0,
       });
     },
-    closeModal() {
+    enter(el, done) {
+      this.animation = TweenMax.to(el, 0.3, {
+        yPercent: 0,
+        opacity: 1,
+        onComplete: done
+      });
+    },
+    leave(el, done) {
+      this.animation.eventCallback("onReverseComplete", done)
       this.animation.reverse()
     }
   }

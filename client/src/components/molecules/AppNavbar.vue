@@ -12,9 +12,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3.2rem;
-  z-index: layer('header');
   pointer-events: none;
+  padding: rem($space-sm);
+  z-index: layer('header');
+
+  @include at($screen-lg) {
+    padding: rem($space-md);
+  }
+
 }
 </style>
 
