@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .m-navbar {
   position: fixed;
   width: 100%;

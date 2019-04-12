@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "d3": "^5.9.2",
     "deck.gl": "^6.4.9",
     "flickity": "^2.2.0",

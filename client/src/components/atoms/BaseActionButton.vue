@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .a-btn {
   cursor: pointer;
   pointer-events: all;
