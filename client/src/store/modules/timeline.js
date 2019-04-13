@@ -1,4 +1,5 @@
-// Timeline consits out of a map.
+import timelineDates from '@/assets/data/map.json';
+
 export default {
   namespaced: true,
   
@@ -7,7 +8,9 @@ export default {
     map: null,
     deck: null,
     activeDateId: 1,
-    cameraLocked: true
+    cameraLocked: true,
+    tooltipPos: {x: 0, y: 1 },
+    timelineDates,
   },
 
   mutations: {
@@ -34,6 +37,10 @@ export default {
     },
     resumeTimer(state) {
       state.timer.resume();
-    }
+    },
+    setTooltipPos(state, pos) {
+      state.tooltipPos = pos
+    },
   },
+
 }

@@ -8,7 +8,7 @@ import { ScatterplotLayer } from '@deck.gl/layers';
 import { mapMutations, mapState } from 'vuex';
 import * as d3 from 'd3';
 import * as pstimer from '@/assets/js/timer.js'
-import timelineItems from '@/assets/data/map.json';
+import timelineDates from '@/assets/data/map.json';
 
 export default {
   name: 'a-deckgl',
@@ -26,14 +26,15 @@ export default {
     };
   },
   computed: {
-    ...mapState('timeline', ['map', 'deck', 'timer', 'activeDateId', 'cameraLocked']),
+    ...mapState('timeline', ['map', 'deck', 'timer', 'activeDateId', 'cameraLocked', 'timelineDates']),
   },
   mounted() {
     this.initDeck()
     this.loadGeodata()
   },
   methods: {
-    ...mapMutations('timeline', ['setDeck', 'setTimer', 'incrementActiveDateId']),
+    ...mapMutations('timeline', ['setDeck', 'setTimer', 'incrementActiveDateId', 'setTooltipPos']),
+    ...mapMutations('ui', ['toggleModal']),
     initDeck() {
       const deck = new Deck({
         canvas: this.$refs.deck,
@@ -53,8 +54,8 @@ export default {
       this.setDeck(deck)
     },
     async loadGeodata() {
-      const timelineCurrentDate = timelineItems.find(item => item.id === this.activeDateId);
-      const timelineNextDate = timelineItems.find(item => item.id === this.activeDateId + 1);
+      const timelineCurrentDate = this.timelineDates.find(item => item.id === this.activeDateId);
+      const timelineNextDate = this.timelineDates.find(item => item.id === this.activeDateId + 1);
       const geodataCurrentDate = await import(`@/assets/data/${timelineCurrentDate.date}-troops.json`);
       const geodataNextDate = await import(`@/assets/data/${timelineNextDate.date}-troops.json`);
       this.geodataNextDate = geodataCurrentDate.features
@@ -118,12 +119,20 @@ export default {
       return new ScatterplotLayer({
         id: 'scatterplot-layer',
         data: [...this.geodataCurrentDate],
-        radiusScale: 10,
-        radiusMinPixels: 5,
+        autoHighlight: true,
         pickable: true,
+        radiusScale: 2,
+        radiusMinPixels: 2,
+        radiusMaxPixels: 6,
         getPosition: d => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
         getFillColor: d => this.getUnitColor(d.properties.country),
-        onClick: d => { if(d.object) { this.$router.push(`/unit/${d.object.properties.id}`)}}
+        getRadius: 1000,
+        onClick: d => { 
+          if(d.object) {
+            this.$router.push(`/unitp/${d.object.properties.id}`)
+          }
+        },
+        onHover: d => this.setTooltipPos({x: d.x, y: d.y, object: d.object})
       });
     },
     getUnitColor(name) {

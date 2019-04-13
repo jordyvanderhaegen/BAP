@@ -15,6 +15,19 @@ export default new Router({
       path: '/',
       name: 'home',
       component: HomeView,
+      children: [
+        {
+          path: '/unitp/:id',
+          name: 'unitp',
+          components: {
+            page: HomeView,
+            unit: UnitDetail,
+          },
+          meta: {
+            showModal: true
+          }
+        }
+      ]
     },
     {
       path: '/event/:id',
