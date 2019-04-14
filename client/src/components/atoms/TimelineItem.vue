@@ -1,5 +1,5 @@
 <template>
-  <div class="a-timeline__item">
+  <div :class="['a-timeline__item', { 'a-timeline__item--active': active}]">
     <p>Chapter <br>0{{ index }}</p>
   </div>
 </template>
@@ -36,6 +36,10 @@ export default {
       type: Number,
       required: true,
     },
+    active: {
+      type: Boolean,
+      required: true,
+    }
   },
 }
 </script>

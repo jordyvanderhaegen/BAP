@@ -1,8 +1,35 @@
 <template>
   <div class="a-timeline__information">
     <p class="a-timeline__information-item">{{ activeDate | formatDate }}</p>
-    <p class="a-timeline__information-item">GE: 3985</p>
-
+    <div 
+      v-if="showCasualties"
+      class="a-timeline__information-casualties"
+    >
+      <p class="a-timeline__information-item">
+        <CasualtiesIcon
+          class="a-timeline__information-item-icon"
+          :class="'a-icon__casualties--ge'"
+        />3985
+      </p>
+      <p class="a-timeline__information-item">
+        <CasualtiesIcon
+          class="a-timeline__information-item-icon"
+          :class="'a-icon__casualties--us'"
+        />3985
+      </p>
+      <p class="a-timeline__information-item">
+        <CasualtiesIcon
+          class="a-timeline__information-item-icon"
+          :class="'a-icon__casualties--uk'"
+        />3985
+      </p>
+      <p class="a-timeline__information-item">
+        <CasualtiesIcon
+          class="a-timeline__information-item-icon"
+          :class="'a-icon__casualties--ca'"
+        />3985
+      </p>
+    </div>
   </div>
 </template>
 
@@ -13,12 +40,11 @@
   top: 11vh;
   left: 0;
   padding: rem($space-sm);
-  z-index: layer('header');
+  z-index: layer("header");
 
   @include at($screen-lg) {
     padding: rem($space-md);
   }
-
 }
 .a-timeline__information-item {
   font-family: $font-family-regular;
@@ -28,15 +54,27 @@
   letter-spacing: rem(5px);
   padding-bottom: rem(10px);
 }
+.a-timeline__information-item-icon {
+  // max-height: rem($font-size-small);
+  max-width: rem(10px);
+  margin-right: 10px;
+}
+.a-timeline__information-casualties {
+  padding-top: rem($space-xs);
+}
 </style>
 
 <script>
-import { mapState } from 'vuex';
+import CasualtiesIcon from "@/components/atoms/CasualtiesIcon.vue";
+import { mapState } from "vuex";
 
 export default {
-  name: 'a-timeline-information',
+  name: "a-timeline-information",
+  components: {
+    CasualtiesIcon
+  },
   computed: {
-    ...mapState('timeline', ['activeDateId', 'timelineDates']),
+    ...mapState('timeline', ['activeDateId', 'timelineDates', 'showCasualties'])
   },
   data() {
     return {
@@ -45,8 +83,10 @@ export default {
   },
   watch: {
     activeDateId() {
-      const item = this.timelineDates.find(item => item.id === this.activeDateId)
-      this.activeDate = item.date
+      const item = this.timelineDates.find(
+        item => item.id === this.activeDateId
+      );
+      this.activeDate = item.date;
     }
   }
 };

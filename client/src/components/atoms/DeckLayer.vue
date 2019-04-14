@@ -2,6 +2,17 @@
   <canvas class="a-map__layer" ref="deck"></canvas>
 </template>
 
+<style lang="scss">
+.a-map__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+
 <script>
 import { Deck, FlyToInterpolator } from '@deck.gl/core';
 import { ScatterplotLayer } from '@deck.gl/layers';

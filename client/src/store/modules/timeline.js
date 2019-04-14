@@ -11,6 +11,7 @@ export default {
     cameraLocked: true,
     tooltipPos: {x: 0, y: 1 },
     timelineDates,
+    showCasualties: false,
   },
 
   mutations: {
@@ -40,6 +41,9 @@ export default {
     },
     setTooltipPos(state, pos) {
       state.tooltipPos = pos
+    },
+    setShowCasualties(state, bool) {
+      state.showCasualties = bool;
     },
   },
 

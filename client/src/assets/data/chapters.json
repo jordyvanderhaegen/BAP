@@ -4,29 +4,30 @@
     "title": "Planning",
     "description": "Lorem ipsum.",
     "coverImageIndex": 1,
-    "unitPosRange": [1, 8]
+    "dateRange": [1, 8]
   },
   {
     "id": 2,
     "title": "Execution",
     "coverImageIndex": 2,
-    "unitPosRange": [9, 12]
+    "dateRange": [9, 12]
   },
   {
     "id": 3,
     "title": "Invasion",
     "coverImageIndex": 3,
-    "unitPosRange": [13, 20]
+    "dateRange": [13, 20]
   },
   {
     "id": 4,
     "title": "Expanding",
     "coverImageIndex": 4,
-    "unitPosRange": [21, 26]
+    "dateRange": [21, 26]
   },
   {
     "id": 5,
     "title": "Finalize",
-    "coverImageIndex": 5
+    "coverImageIndex": 5,
+    "dateRange": [26, 28]
   }
 ]

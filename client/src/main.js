@@ -12,8 +12,16 @@ new Vue({
   render: h => h(App),
 }).$mount('#app');
 
+/**
+ * Global date formatter
+ */
 Vue.filter('formatDate', (value) => {
   if (value) {
     return moment(String(value), 'DD-MM-YYYY').format('MMM Do YY');
   }
 })
+
+/**
+ * Global css reset
+ */
+import '@/assets/styles/vendors/_reset.scss'

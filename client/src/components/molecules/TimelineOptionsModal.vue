@@ -15,8 +15,8 @@
           <label for="camera_lock" class="m-timeline__modal-label">Lock camera</label>
         </li>
         <li>
-          <input type="checkbox">
-          <label>Lock camera</label>
+          <input type="checkbox" id="show_casualties" class="m-timeline__modal-input" v-model="showCasualties">
+          <label for="show_casualties" class="m-timeline__modal-label">Show casualties</label>
         </li>
         <li>
           <input type="checkbox">
@@ -34,14 +34,17 @@
   top: 0;
   width: 300px;
   padding: 1.6rem;
-  background: rgba($background-color-primary, 0.5);
+  background: $background-color-overlay;
   z-index: layer("header");
-  font-family: $font-family-regular;
-  font-size: $font-size-base;
   li {
     display: flex;
     align-items: center;
   }
+}
+.m-timeline__modal-label {
+  font-family: $font-family-regular;
+  font-size: $font-size-base;
+  color: $text-color-primary;
 }
 </style>
 
@@ -64,6 +67,14 @@ export default {
       },
       set(val) {
         this.$store.commit('timeline/setCameraLocked', val)
+      }
+    },
+    showCasualties: {
+      get() {
+        return this.$store.state.timeline.showCasualties
+      },
+      set(val) {
+        this.$store.commit('timeline/setShowCasualties', val)
       }
     }
   },

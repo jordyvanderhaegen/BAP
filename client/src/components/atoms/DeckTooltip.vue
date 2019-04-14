@@ -1,18 +1,19 @@
 <template>
   <div 
-    class="ello"
+    class="a-deck__tooltip"
     v-if="visible"
     :style="{top: `${y}px`, left: `${x}px`}"
   >{{ title }}</div>
 </template>
 
 <style lang="scss">
-.ello {
-  z-index: layer('header');
+.a-deck__tooltip {
   position: fixed;
-  background: rgba($background-color-primary, .5);
+  background: $background-color-overlay;
+  z-index: layer('header');
   font-family: $font-family-regular;
   font-size: rem($font-size-small);
+  color: $text-color-primary;
   padding: rem(5px);
   pointer-events: none;
 }
@@ -21,6 +22,7 @@
 
 <script>
 import { mapState } from 'vuex';
+
 export default {
   name: 'a-deck-tooltip',
   computed: {
@@ -43,6 +45,8 @@ export default {
       this.title = object.properties.name
       this.visible = true
     }
+  },
+  mounted() {
   }
   /* props: {
     title: {
