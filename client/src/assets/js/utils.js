@@ -1,5 +1,8 @@
 import * as moment from 'moment'
 import router from '@/router.js';
+import store from '@/store/index.js';
+import { FlyToInterpolator } from '@deck.gl/core';
+import * as d3 from 'd3';
 
 export class TimeLine {
   constructor() {
@@ -8,30 +11,39 @@ export class TimeLine {
     this.activeIndex = 0
   }
 
-  addCamera() {
-    this.timelineItems.push(new TimeLineCamera())
+  addCamera = (id, camera, duration) => {
+    this.timelineItems.push(new TimeLineCamera(id, duration, camera))
   }
 
-  addContent() {
-    this.timelineItems.push(new TimeLineContent(1, 3000))
+  addContent = (id, duration) => {
+    this.timelineItems.push(new TimeLineContent(id, duration))
   }
 
-  play() {
+  play = () => {
     if(this.activeIndex >= this.timelineItems.length) return
-    const { timer } = this.timelineItems[this.activeIndex]
+    const timelineItem = this.timelineItems[this.activeIndex]
+    const { timer } = timelineItem
     timer.start().then(() => {
+      if (timelineItem instanceof TimeLineContent) {
+        timelineItem.closeModal()
+      }
       this.next()
     })
   }
 
-  next() {
+  next = () => {
     this.activeIndex++
     this.play()
   }
 
-  pause() {
+  pause = () => {
     const { timer } = this.timelineItems[this.activeIndex]
     timer.pause()
+  }
+
+  restart = () => {
+    this.activeIndex = 0
+    this.play()
   }
 }
 
@@ -43,7 +55,7 @@ export const TIMER_STATE = {
 };
 
 export class Timer {
-  constructor(duration, callback) {
+  constructor(duration, callback, precallback) {
     this.status = TIMER_STATE.INITIALIZED
     this.callback = callback
     this.duration = duration
@@ -51,11 +63,11 @@ export class Timer {
     this.startTime = null
   }
 
-  start() {
+  start = () => {
     if (this.status === TIMER_STATE.STARTED) return
     return new Promise((res,rej) => {
+      this.callback()
       this.timeout = setTimeout(() => {
-        this.callback()
         res()
       }, this.duration);
       this.startTime = moment()
@@ -63,7 +75,7 @@ export class Timer {
     })
   }
 
-  pause() {
+  pause = () => {
     if (this.status !== TIMER_STATE.STARTED) return
     const diff = moment.duration(moment().diff(this.startTime))
     this.duration -= diff.asMilliseconds()
@@ -71,38 +83,45 @@ export class Timer {
     clearTimeout(this.timeout)
   }
 
-  end() {
+  end = () => {
     this.status = TIMER_STATE.STOPPED
   }
 
 }
 
 export class TimeLineCamera {
-  constructor(id, duration) {
-    this.timer = new Timer(duration, this.flyTo)
+  constructor(id, duration, camera) {
     this.id = id
+    this.duration = duration
+    this.camera = camera
+    this.timer = new Timer(duration, this.flyTo)
+    this.deck = store.state.timeline.deck
   }
 
-  flyTo() {
-
+  flyTo = () => {
+    this.deck.setProps({
+      viewState: {
+        ...this.camera,
+        transitionInterpolator: new FlyToInterpolator(),
+        transitionDuration: this.duration,
+        transitionEasing: d3.easeCubic
+      }
+    })
   }
 
-  foo() {
-    console.log('foo')
-  }
 }
 
 export class TimeLineContent {
   constructor(id, duration) {
-    this.timer = new Timer(duration, this.presentModal)
+    this.timer = new Timer(duration, this.init)
     this.id = id
   }
 
-  presentModal() {
+  init = () => {
     router.push('/timeline/story/' + this.id)
   }
 
-  foo() {
-    console.log('foo2')
+  closeModal = () => {
+    router.push('/')
   }
 }

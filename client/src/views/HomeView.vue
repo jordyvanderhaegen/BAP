@@ -1,17 +1,19 @@
 <template>
-  <div>
+  <div class="l-home">
     <AppNavbar />
     <MapContainer />
     <TimelineList />
     <TimelineToolbar />
-    <Modal v-if="showModal">
-      <router-view name="unit"/>
-    </Modal>
+    <StoryModal v-if="showModal">
+      <router-view name="story"/>
+    </StoryModal>
   </div>
 </template>
 
 <style lang="scss">
-
+.l-home {
+  // display: flex;
+}
 </style>
 
 <script>
@@ -19,7 +21,8 @@ import TimelineList from '@/components/molecules/TimelineList.vue';
 import MapContainer from '@/components/molecules/MapContainer.vue';
 import TimelineToolbar from '@/components/molecules/TimelineToolbar.vue';
 import AppNavbar from '@/components/molecules/AppNavbar.vue';
-import Modal from '@/components/templates/Modal.vue';
+import Modal from '@/components/molecules/Modal.vue';
+import StoryModal from '@/components/molecules/StoryModal.vue';
 
 export default {
   name: 'home-view',
@@ -29,6 +32,7 @@ export default {
     MapContainer,
     AppNavbar,
     Modal,
+    StoryModal,
   },
   data() {
     return {

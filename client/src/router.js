@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import HomeView from './views/HomeView.vue';
 import EventDetail from './views/EventDetail.vue';
 import UnitDetail from './views/UnitDetail.vue';
+import TimelineStory from './components/molecules/TimelineStory.vue';
 import PageNotFoundView from './views/PageNotFoundView.vue';
 
 Vue.use(Router);
@@ -22,6 +23,17 @@ export default new Router({
           components: {
             page: HomeView,
             unit: UnitDetail,
+          },
+          meta: {
+            showModal: true
+          }
+        },
+        {
+          path: '/timeline/story/:id',
+          name: 'story',
+          components: {
+            page: HomeView,
+            story: TimelineStory,
           },
           meta: {
             showModal: true

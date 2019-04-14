@@ -41,7 +41,7 @@ export default {
   },
   mounted() {
     this.initDeck()
-    this.loadGeodata()
+    // this.loadGeodata()
   },
   methods: {
     ...mapMutations('timeline', ['setDeck', 'setTimer', 'incrementActiveDateId', 'setTooltipPos']),

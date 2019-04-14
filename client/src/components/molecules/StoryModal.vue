@@ -5,31 +5,33 @@
     @leave="leave"
     appear
   >
-    <div class="l-modal">
+    <div class="m-story-modal">
       <slot />
     </div>
   </transition>
 </template>
 
 <style lang="scss">
-.l-modal {
-  color: white;
+.m-story-modal {
+  width: 100%;
+  height: 100%;
   position: fixed;
-  background: $background-color-primary;
-  overflow: auto;
-  top: 0;
+  bottom: 11vh;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  justify-content: center;
+  align-items: flex-end;
+  padding: rem($space-xs) rem($space-xs);
   z-index: layer('header');
+  pointer-events: none;
+  display: flex;
 }
 </style>
 
 <script>
-import { TweenMax, Power4, TimelineMax } from 'gsap';
+import { TweenMax, TimelineMax } from 'gsap';
 
 export default {
-  name: 'l-modal',
+  name: 'm-storymodal',
   data() {
     return {
       animation: null,

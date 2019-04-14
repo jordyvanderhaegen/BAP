@@ -14,10 +14,5 @@ export default {
   components: {
     UnitDetail,
   },
-  data() {
-    return {
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/NormandySupply_edit.jpg/1200px-NormandySupply_edit.jpg',
-    };
-  },
 };
 </script>
