@@ -6,8 +6,9 @@
     />
     <PlayButton @click.native="resumeTimer()" />
     <PauseButton @click.native="pauseTimer()" />
-    <RestartButton @click.native="setActiveDateId(1)" />
+    <RestartButton @click.native="restartTimer(1)" />
     <TimelineOptionsModal />
+    <button @click="logCamera()">log</button>
   </div>
 </template>
 
@@ -47,10 +48,16 @@ export default {
   },
   computed: {
     ...mapState('ui', ['timelineToolbarModalOpen']),
+    ...mapState('timeline', ['timer']),
   },
   methods: {
     ...mapMutations('ui', ['toggleMenuToolbarModal']),
-    ...mapMutations('timeline', ['setActiveDateId', 'pauseTimer', 'resumeTimer']),
+    ...mapMutations('timeline', ['restartTimer', 'pauseTimer', 'resumeTimer']),
+    logCamera() {
+      /* console.log(JSON.stringify(this.$store.state.timeline.deck.viewState['default-view'])) */
+      console.log(this.timer)
+      this.timer.pause()
+    }
   }
 }
 </script>

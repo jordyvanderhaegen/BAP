@@ -1,0 +1,30 @@
+[
+  {
+    "type": "camera",
+    "duration": 10000,
+    "camera": {
+      "width": 1155,
+      "height": 937,
+      "latitude": 69.84705773267677,
+      "longitude": 19.613047269134913,
+      "zoom": 5.355823249249143,
+      "bearing": 19.870129870129862,
+      "pitch": 21.029145676271305,
+      "altitude": 1.5
+    }
+  },
+  {
+    "type": "camera",
+    "duration": 10000,
+    "camera": {
+      "width": 1155,
+      "height": 937,
+      "latitude": 49.88898730174512,
+      "longitude": -0.361739197178522,
+      "zoom": 6.416247511492029,
+      "bearing": -25.63636363625589,
+      "pitch": 49.07012827292889,
+      "altitude": 1.5
+    }
+  }
+]

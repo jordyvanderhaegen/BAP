@@ -37,7 +37,10 @@ export default {
       state.timer.pause();
     },
     resumeTimer(state) {
-      state.timer.resume();
+      state.timer.play();
+    },
+    restartTimer(state) {
+      state.timer.restart();
     },
     setTooltipPos(state, pos) {
       state.tooltipPos = pos
