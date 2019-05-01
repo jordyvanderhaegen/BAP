@@ -21,6 +21,8 @@ export class TroopsTimer extends Timer {
     this.deck = store.state.timeline.deck
     this.cameraId = cameraId
     this.timekeeper = null
+    this.fps = 60
+    this.framesPerFetch = (this.duration / 1000) * this.fps
   }
 
   /**
@@ -29,7 +31,9 @@ export class TroopsTimer extends Timer {
    */
   start = async () => {
     console.log(`Starting with new data ${this.currentFilename}`)
-    // setTimeout(() => this.timeline.next())
+    if (this.timekeeper) {
+      return this.timekeeper.resume()
+    }
     await this.loadData()
     this.run()
   }
@@ -67,45 +71,27 @@ export class TroopsTimer extends Timer {
   }
 
   run = () => {
-    // console.log(this.currentFrame);
-    /* if (this.currentFrame >= 1) {
-      console.log('higher than 1')
-      this.currentFrame = 0
-      return this.timeline.next()
-    } */
-
-    /* if (!this.timekeeper) {
-      this.timekeeper = pstimer.pausableTimer(this.run)
-    }
-    this.startAnimation() */
-    // this.timekeeper.resume()
-    
-    /* if (this.currentFrame >= 1) {
-      this.currentFrame = 0
-      console.log('next jfklqsmjk');
-      
-      return this.timeline.next()
-    } */
-    this.timekeeper = pstimer.pausableTimer(this.startAnimation)
-    /* setTimeout(() => {
-      
-      // this.requestId = requestAnimationFrame(this.startAnimation)
-    }, 1000 / (this.duration / this.fps)) */
-    
-      
+    this.startAnimation()
   }
 
   startAnimation = () => {
+    if (this.timekeeper) {
+      this.timekeeper.stop()
+    }
 
-    if (this.currentFrame >= 1) {
-      console.log('higher than 1')
-      this.currentFrame = 0
+    this.currentFrame = 0
+    this.timekeeper = pstimer.pausableTimer(this.animationFrame)
+
+  }
+
+  animationFrame = () => {
+    if (this.currentFrame >= this.framesPerFetch) {
       this.timekeeper.stop()
       return this.timeline.next()
     }
 
     this.geodataCurrentDate.forEach(feature => {
-      feature.geometry.coordinates = feature.interpolatePos(this.currentFrame);
+      feature.geometry.coordinates = feature.interpolatePos(this.currentFrame / this.framesPerFetch);
     })
 
     this.deck.setProps({
@@ -113,14 +99,12 @@ export class TroopsTimer extends Timer {
       viewState: this.deck.viewState
     })
 
-    this.currentFrame += .003
+    this.currentFrame++
   }
 
   pause = () => {
     console.log('pausing the timer')
     this.timekeeper.pause()
-    // console.log(this.requestId)
-    // return
   }
 
   createScatterPlotLayer = () => {
