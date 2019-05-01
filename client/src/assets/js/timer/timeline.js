@@ -30,6 +30,7 @@ export class Timeline {
 
   /**
    * Gets the active timer instance
+   * 
    */
   getActiveTimer = () => {
     return this.items[this.activeItemIndex]
@@ -46,6 +47,7 @@ export class Timeline {
 
   /**
    * Finds the active timer and pasuses it
+   * 
    */
   pause = () => {
     this.getActiveTimer().pause()
@@ -63,6 +65,7 @@ export class Timeline {
   /**
    * Add a content timer to the items list
    * @param duration
+   * @param contentId
    * 
    */
   addContent = (duration, contentId) => {
@@ -72,6 +75,9 @@ export class Timeline {
   /**
    * Add a troops timer to the items list
    * @param duration
+   * @param currentDate
+   * @param nextDate
+   * @param cameraId
    * 
    */
   addTroops = (duration, currentDate, nextDate, cameraId) => {
@@ -81,14 +87,44 @@ export class Timeline {
   /**
    * Add a camera timer to the items list
    * @param duration
+   * @param cameraId
+   * @param preExecute
    * 
    */
   addCamera = (duration, cameraId, preExecute) => {
     this.items.push(new CameraTimer(duration, this, cameraId, preExecute))
   }
 
+  /**
+   * Add a JSON timer to the items list
+   * 
+   */
   addJSON = (duration, filename) => {
     this.items.push(new JSONTimer(duration, this, filename))
+  }
+
+  /**
+   * Load a timeline from a JSON object
+   * @param filename
+   * 
+   */
+  setTimelineFromJSON = async (filename) => {
+    const timeline = await import(`@/assets/data/${filename}.json`)
+
+    timeline.default.forEach(item => {
+      const { refId, duration, startDate, endDate, cameraId } = item
+      switch (item.type) {
+        case 'camera':
+          return this.addCamera(duration, refId)
+        case 'content':
+          return this.addContent(duration, refId)
+        case 'troops':
+          return this.addTroops(duration, startDate, endDate, cameraId)
+        default:
+          return this.addTimer(duration)
+      }
+    })
+
   }
 
 }
