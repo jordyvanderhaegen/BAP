@@ -4,9 +4,9 @@
       @click.native="toggleMenuToolbarModal()"
       :active="timelineToolbarModalOpen"
     />
-    <PlayButton @click.native="resumeTimer()" />
-    <PauseButton @click.native="pauseTimer()" />
-    <RestartButton @click.native="restartTimer(1)" />
+    <PlayButton @click.native="playTimeline()" />
+    <PauseButton @click.native="pauseTimeline()" />
+    <RestartButton @click.native="restartTimeline()" />
     <TimelineOptionsModal />
     <button @click="logCamera()">log</button>
   </div>
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     ...mapMutations('ui', ['toggleMenuToolbarModal']),
-    ...mapMutations('timeline', ['restartTimer', 'pauseTimer', 'resumeTimer']),
+    ...mapMutations('timeline', ['restartTimeline', 'pauseTimeline', 'playTimeline']),
     logCamera() {
       /* console.log(JSON.stringify(this.$store.state.timeline.deck.viewState['default-view'])) */
       console.log(this.timer)

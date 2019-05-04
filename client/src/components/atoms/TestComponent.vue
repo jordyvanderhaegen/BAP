@@ -2,7 +2,7 @@
 
 <script>
 // import { TimeLine, Timer } from "@/assets/js/utils";
-import { Timeline } from '@/assets/js/timer/timeline';
+// import { Timeline } from '@/assets/js/timer/timeline';
 import { mapState, mapMutations } from "vuex";
 import dates from "@/assets/data/map.json";
 import timeline from "@/assets/data/timeline.json";
@@ -29,19 +29,17 @@ export default {
     };
   },
   mounted() {
-    const timeline = new Timeline()
-    timeline.setTimelineFromJSON('timeline')
-    this.setTimer(timeline)
+    // this.setTimeline(new Timeline())
+    this.setTimelineFromJSON('timeline')
     this.map.on("load", () => {
-      console.log(timeline)
-      timeline.play()
+      this.playTimeline()
     });
   },
   computed: {
     ...mapState("timeline", ["map", "timer"])
   },
   methods: {
-    ...mapMutations("timeline", ["setTimer"])
+    ...mapMutations("timeline", ['setTimelineFromJSON', 'setTimeline', 'playTimeline'])
   }
 };
 </script>
