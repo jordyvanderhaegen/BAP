@@ -11,7 +11,7 @@ export class ContentTimer extends Timer {
   }
 
   /**
-   * Overwrites the base class start
+   * Overwrites the base class method start
    * 
    */
   start = () => {

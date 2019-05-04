@@ -21,7 +21,6 @@ export class TroopsTimer extends Timer {
     this.deck = store.state.timeline.deck
     this.cameraId = cameraId
     this.timekeeper = null
-    this.fps = 60
     this.framesPerFetch = (this.duration / 1000) * this.fps
   }
 

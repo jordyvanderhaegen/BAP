@@ -1,7 +1,7 @@
 <template>
   <div class="m-timeline__story">
     <h3 class="a-timeline__story-date">Atlantic wall.</h3>
-    <p class="a-timeline_story-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, placeat laudantium doloribus sed, omnis aut explicabo atque odit tenetur recusandae officia consequuntur sequi distinctio delectus molestiae. Adipisci officiis totam magnam!Laboriosam ullam eos harum nisi atque minima quidem veritatis ipsum voluptates deserunt dolor autem quae esse, velit est obcaecati, maiores provident inventore earum amet officiis rerum dolore. Non, nulla rem!</p>
+    <p class="a-timeline__story-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, placeat laudantium doloribus sed, omnis aut explicabo atque odit tenetur recusandae officia consequuntur sequi distinctio delectus molestiae. Adipisci officiis totam magnam!Laboriosam ullam eos harum nisi atque minima quidem veritatis ipsum voluptates deserunt dolor autem quae esse, velit est obcaecati, maiores provident inventore earum amet officiis rerum dolore. Non, nulla rem!</p>
   </div>
 </template>
 
@@ -21,7 +21,7 @@
   }
 
 }
-.a-timeline_story-description {
+.a-timeline__story-description {
   font-family: $font-family-regular;
   font-size: rem($font-size-small);
   line-height: 1.7em;
