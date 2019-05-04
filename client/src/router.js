@@ -5,6 +5,7 @@ import HomeView from './views/HomeView.vue';
 import EventDetail from './views/EventDetail.vue';
 import UnitDetail from './views/UnitDetail.vue';
 import TimelineStory from './components/molecules/TimelineStory.vue';
+import TimelineChapter from './components/molecules/TimelineChapter.vue';
 import PageNotFoundView from './views/PageNotFoundView.vue';
 
 Vue.use(Router);
@@ -34,6 +35,17 @@ export default new Router({
           components: {
             page: HomeView,
             story: TimelineStory,
+          },
+          meta: {
+            showModal: true
+          }
+        },
+        {
+          path: '/timeline/chapter/:id',
+          name: 'chapter',
+          components: {
+            page: HomeView,
+            story: TimelineChapter,
           },
           meta: {
             showModal: true

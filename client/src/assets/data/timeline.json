@@ -1,5 +1,10 @@
 [
   {
+    "type": "chapter",
+    "duration": 10000,
+    "refId": 1
+  },
+  {
     "type": "content",
     "duration": 2000,
     "refId": 1
@@ -16,7 +21,7 @@
   },
   {
     "type": "troops",
-    "duration": 2000,
+    "duration": 4000,
     "startDate": "06-06-44",
     "endDate": "07-06-44",
     "cameraId": 3

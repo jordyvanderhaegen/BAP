@@ -3,6 +3,8 @@ import { ContentTimer } from './content-timer';
 import { TroopsTimer } from './troops-timer';
 import { CameraTimer } from './camera-timer';
 import { JSONTimer } from './json-timer';
+import chapters from '@/assets/data/chapters.json';
+import { ChapterTimer } from './chapter-timer';
 
 export class Timeline {
   constructor() {
@@ -16,6 +18,7 @@ export class Timeline {
    */
   next = () => {
     this.activeItemIndex++
+    console.log(this.getActiveChapter())
     this.play()
   }
 
@@ -54,6 +57,23 @@ export class Timeline {
   }
 
   /**
+   * Restart the timeline
+   */
+  restart = () => {
+    // TODO: Split up in seperate function to restart from certain index
+    // FIXME: clear deckgl layers
+    this.activeItemIndex = 0
+    this.play()
+  }
+
+  /**
+   * Returns the active chapter object
+   */
+  getActiveChapter = () => {
+    return chapters.find(item => item.indexRange[0] <= this.activeItemIndex && item.indexRange[1] >= this.activeItemIndex)
+  }
+
+  /**
    * Add a base timer to the items list
    * @param duration
    * 
@@ -70,6 +90,10 @@ export class Timeline {
    */
   addContent = (duration, contentId) => {
     this.items.push(new ContentTimer(duration, this, contentId))
+  }
+
+  addChapter = (duration, chapterId) => {
+    this.items.push(new ChapterTimer(duration, this, chapterId))
   }
 
   /**
@@ -118,6 +142,8 @@ export class Timeline {
           return this.addCamera(duration, refId)
         case 'content':
           return this.addContent(duration, refId)
+        case 'chapter':
+          return this.addChapter(duration, refId)
         case 'troops':
           return this.addTroops(duration, startDate, endDate, cameraId)
         default:
