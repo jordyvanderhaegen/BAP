@@ -195,13 +195,13 @@ export class GeoData extends Timer {
 
 
   loadGeodata = async () => {
-    const geodataCurrentDate = await import(`@/assets/data/${this.currentDateObject.date}-troops.json`)
-    const geodataNextDate = await import(`@/assets/data/${this.nextDateObject.date}-troops.json`)
+    const geodataCurrentDate = await import(`@/assets/data/${this.currentDateObject.date}.json`)
+    const geodataNextDate = await import(`@/assets/data/${this.nextDateObject.date}.json`)
     this.geodataNextDate = geodataNextDate.features
     this.geodataCurrentDate = geodataCurrentDate.features.map((feature) => {
-      const {id, front} = feature.properties
+      const {id, LN} = feature.properties
       const featureNextDate = geodataNextDate.features.find(feature =>
-        feature.properties.id == id && feature.properties.front == front
+        feature.properties.LN == LN
       );
       return {
         ...feature,
@@ -240,7 +240,7 @@ export class GeoData extends Timer {
     }
     this.timekeeper.stop()
     this.stopTimer()
-    
+
   }
 
   startAnimation = () => {
@@ -330,7 +330,7 @@ export class GeoData extends Timer {
   playCamera = () => {
     const timelineItem = this.timelineItems[this.activeIndex]
     const { timer } = timelineItem
-    
+
   }
 
   next = () => {
@@ -492,7 +492,7 @@ export class TimeLineGeodata {
     return new Promise((res,rej) => {
       res('returning promise')
     })
-    
+
   }
 
   startAnimation = () => {

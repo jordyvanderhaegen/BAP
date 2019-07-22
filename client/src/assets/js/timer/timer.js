@@ -10,7 +10,7 @@ export class Timer {
 
   /**
    * Starts the timer with a specific duration
-   * 
+   *
    */
   start = () => {
     this.startTime = moment()
@@ -21,7 +21,7 @@ export class Timer {
 
   /**
    * Callback that will be executed
-   * 
+   *
    */
   run = () => {
     console.log(`Starting base timer ${this.duration}`)
@@ -29,12 +29,16 @@ export class Timer {
 
   /**
    * Pauses the timer and sets the leftover duration
-   * 
+   *
    */
   pause = () => {
     const diff = moment.duration(moment().diff(this.startTime))
     this.duration -= diff.asMilliseconds()
     clearTimeout(this.timeout)
+  }
+
+  stop = () => {
+    this.pause()
   }
 
 }

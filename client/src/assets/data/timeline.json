@@ -1,7 +1,7 @@
 [
   {
     "type": "chapter",
-    "duration": 10000,
+    "duration": 2000,
     "refId": 1
   },
   {
@@ -16,63 +16,63 @@
   },
   {
     "type": "camera",
-    "duration": 3000,
+    "duration": 2000,
     "refId": 2
   },
   {
     "type": "troops",
     "duration": 4000,
-    "startDate": "06-06-44",
-    "endDate": "07-06-44",
+    "startDate": "1944-06-06",
+    "endDate": "1944-06-07",
     "cameraId": 3
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "07-06-44",
-    "endDate": "08-06-44",
+    "startDate": "1944-06-07",
+    "endDate": "1944-06-08",
     "cameraId": 4
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "08-06-44",
-    "endDate": "09-06-44",
+    "startDate": "1944-06-08",
+    "endDate": "1944-06-09",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "09-06-44",
-    "endDate": "10-06-44",
+    "startDate": "1944-06-09",
+    "endDate": "1944-06-10",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "10-06-44",
-    "endDate": "11-06-44",
+    "startDate": "1944-06-10",
+    "endDate": "1944-06-11",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "11-06-44",
-    "endDate": "12-06-44",
+    "startDate": "1944-06-11",
+    "endDate": "1944-06-12",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "12-06-44",
-    "endDate": "13-06-44",
+    "startDate": "1944-06-12",
+    "endDate": "1944-06-13",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "13-06-44",
-    "endDate": "14-06-44",
+    "startDate": "1944-06-13",
+    "endDate": "1944-06-14",
     "cameraId": 5
   },
   {
@@ -83,141 +83,162 @@
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "14-06-44",
-    "endDate": "15-06-44",
+    "startDate": "1944-06-14",
+    "endDate": "1944-06-15",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "15-06-44",
-    "endDate": "16-06-44",
+    "startDate": "1944-06-15",
+    "endDate": "1944-06-16",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "16-06-44",
-    "endDate": "17-06-44",
+    "startDate": "1944-06-16",
+    "endDate": "1944-06-17",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "17-06-44",
-    "endDate": "18-06-44",
+    "startDate": "1944-06-17",
+    "endDate": "1944-06-18",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "18-06-44",
-    "endDate": "19-06-44",
+    "startDate": "1944-06-18",
+    "endDate": "1944-06-19",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "19-06-44",
-    "endDate": "20-06-44",
+    "startDate": "1944-06-19",
+    "endDate": "1944-06-20",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "20-06-44",
-    "endDate": "21-06-44",
+    "startDate": "1944-06-20",
+    "endDate": "1944-06-21",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "21-06-44",
-    "endDate": "22-06-44",
+    "startDate": "1944-06-21",
+    "endDate": "1944-06-22",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "22-06-44",
-    "endDate": "23-06-44",
+    "startDate": "1944-06-22",
+    "endDate": "1944-06-23",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "23-06-44",
-    "endDate": "24-06-44",
+    "startDate": "1944-06-23",
+    "endDate": "1944-06-24",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "24-06-44",
-    "endDate": "25-06-44",
+    "startDate": "1944-06-24",
+    "endDate": "1944-06-25",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "25-06-44",
-    "endDate": "26-06-44",
+    "startDate": "1944-06-25",
+    "endDate": "1944-06-26",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "26-06-44",
-    "endDate": "27-06-44",
+    "startDate": "1944-06-26",
+    "endDate": "1944-06-27",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "27-06-44",
-    "endDate": "28-06-44",
+    "startDate": "1944-06-27",
+    "endDate": "1944-06-28",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "28-06-44",
-    "endDate": "29-06-44",
+    "startDate": "1944-06-28",
+    "endDate": "1944-06-29",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "29-06-44",
-    "endDate": "30-06-44",
+    "startDate": "1944-06-29",
+    "endDate": "1944-06-30",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "30-06-44",
-    "endDate": "01-07-44",
+    "startDate": "1944-06-30",
+    "endDate": "1944-07-01",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "01-07-44",
-    "endDate": "02-07-44",
+    "startDate": "1944-07-01",
+    "endDate": "1944-07-02",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "02-07-44",
-    "endDate": "03-07-44",
+    "startDate": "1944-07-02",
+    "endDate": "1944-07-03",
     "cameraId": 5
   },
   {
     "type": "troops",
     "duration": 2000,
-    "startDate": "03-07-44",
-    "endDate": "04-07-44",
+    "startDate": "1944-07-03",
+    "endDate": "1944-07-04",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-04",
+    "endDate": "1944-07-05",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-05",
+    "endDate": "1944-07-06",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-06",
+    "endDate": "1944-07-07",
     "cameraId": 5
   }
 ]

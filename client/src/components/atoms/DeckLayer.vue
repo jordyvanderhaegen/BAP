@@ -2,16 +2,6 @@
   <canvas class="a-map__layer" ref="deck"></canvas>
 </template>
 
-<style lang="scss">
-.a-map__layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>
-
 
 <script>
 import { Deck, FlyToInterpolator } from '@deck.gl/core';
@@ -67,19 +57,20 @@ export default {
     async loadGeodata() {
       const timelineCurrentDate = this.timelineDates.find(item => item.id === this.activeDateId);
       const timelineNextDate = this.timelineDates.find(item => item.id === this.activeDateId + 1);
-      const geodataCurrentDate = await import(`@/assets/data/${timelineCurrentDate.date}-troops.json`);
-      const geodataNextDate = await import(`@/assets/data/${timelineNextDate.date}-troops.json`);
+      const geodataCurrentDate = await import(`@/assets/data/${timelineCurrentDate.date}.json`);
+      const geodataNextDate = await import(`@/assets/data/${timelineNextDate.date}.json`);
       this.geodataNextDate = geodataCurrentDate.features
       this.geodataCurrentDate = geodataCurrentDate.features.map((feature) => {
         // Destruct feature object
-        const {id, front} = feature.properties;
+        const {id, LN} = feature.properties;
         // Get next point to determine interpolation
-        const featureNextDate = geodataNextDate.features.find(feature => 
-          feature.properties.id == id && feature.properties.front == front
+        const featureNextDate = geodataNextDate.features.find(feature =>
+          // feature.properties.id == id && feature.properties.front == front
+          feature.properties.LN == LN
         );
         return {
           ...feature,
-          interpolatePos: d3.geoInterpolate(feature.geometry.coordinates, 
+          interpolatePos: d3.geoInterpolate(feature.geometry.coordinates,
           featureNextDate ? featureNextDate.geometry.coordinates : feature.geometry.coordinates
           ),
         };
@@ -95,7 +86,7 @@ export default {
           }
         });
       }
-      
+
       this.startAnimation()
       this.incrementActiveDateId()
     },
@@ -138,7 +129,7 @@ export default {
         getPosition: d => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
         getFillColor: d => this.getUnitColor(d.properties.country),
         getRadius: 1000,
-        onClick: d => { 
+        onClick: d => {
           if(d.object) {
             this.$router.push(`/unitp/${d.object.properties.id}`)
           }

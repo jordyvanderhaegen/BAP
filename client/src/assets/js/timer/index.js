@@ -5,6 +5,7 @@ import { CameraTimer } from './camera-timer';
 import { JSONTimer } from './json-timer';
 import chapters from '@/assets/data/chapters.json';
 import { ChapterTimer } from './chapter-timer';
+import store from '@/store/index.js';
 
 export class Timeline {
   constructor() {
@@ -14,7 +15,7 @@ export class Timeline {
 
   /**
    * Adds 1 to the active index and plays the timer
-   * 
+   *
    */
   next = () => {
     this.activeItemIndex++
@@ -24,7 +25,7 @@ export class Timeline {
 
   /**
    * Subtracts 1 from the next index and plays the timer
-   * 
+   *
    */
   previous = () => {
     this.activeItemIndex--
@@ -33,7 +34,7 @@ export class Timeline {
 
   /**
    * Gets the active timer instance
-   * 
+   *
    */
   getActiveTimer = () => {
     return this.items[this.activeItemIndex]
@@ -41,29 +42,50 @@ export class Timeline {
 
   /**
    * Finds the active timer and starts it
-   * 
+   *
    */
   play = () => {
-    if (this.activeItemIndex >= this.items.length) return
+    if (this.activeItemIndex >= this.items.length) throw new Error('Index out of range')
     this.getActiveTimer().start()
   }
 
   /**
-   * Finds the active timer and pasuses it
-   * 
+   * Plays the timeline from a certain index.
+   *
    */
-  pause = () => {
-    this.getActiveTimer().pause()
+  playFromIndex = (index) => {
+    // TODO: Clear active deck layers
+    this.activeItemIndex = index
+    this.play()
   }
 
   /**
-   * Restart the timeline
+   * Restarts the timeline from the first index.
+   *
    */
   restart = () => {
-    // TODO: Split up in seperate function to restart from certain index
-    // FIXME: clear deckgl layers
-    this.activeItemIndex = 0
-    this.play()
+    this.getActiveTimer().stop()
+    this.resetDeckLayers()
+    this.playFromIndex(0)
+  }
+
+  /**
+   * Removes all the current deck.gl layers.
+   */
+  resetDeckLayers = () => {
+    console.log('resetting layer')
+    console.log(store.state.timeline.deck)
+    store.state.timeline.deck.setProps({
+      layers: [],
+    })
+  }
+
+  /**
+   * Finds the active timer and pasuses it
+   *
+   */
+  pause = () => {
+    this.getActiveTimer().pause()
   }
 
   /**
@@ -76,7 +98,7 @@ export class Timeline {
   /**
    * Add a base timer to the items list
    * @param duration
-   * 
+   *
    */
   addTimer = (duration) => {
     this.items.push(new Timer(duration, this))
@@ -86,7 +108,7 @@ export class Timeline {
    * Add a content timer to the items list
    * @param duration
    * @param contentId
-   * 
+   *
    */
   addContent = (duration, contentId) => {
     this.items.push(new ContentTimer(duration, this, contentId))
@@ -102,7 +124,7 @@ export class Timeline {
    * @param currentDate
    * @param nextDate
    * @param cameraId
-   * 
+   *
    */
   addTroops = (duration, currentDate, nextDate, cameraId) => {
     this.items.push(new TroopsTimer(duration, this, 60, currentDate, nextDate, cameraId))
@@ -113,7 +135,7 @@ export class Timeline {
    * @param duration
    * @param cameraId
    * @param preExecute
-   * 
+   *
    */
   addCamera = (duration, cameraId, preExecute) => {
     this.items.push(new CameraTimer(duration, this, cameraId, preExecute))
@@ -121,7 +143,7 @@ export class Timeline {
 
   /**
    * Add a JSON timer to the items list
-   * 
+   *
    */
   addJSON = (duration, filename) => {
     this.items.push(new JSONTimer(duration, this, filename))
@@ -130,7 +152,7 @@ export class Timeline {
   /**
    * Load a timeline from a JSON object
    * @param filename
-   * 
+   *
    */
   setTimelineFromJSON = async (filename) => {
     const timeline = await import(`@/assets/data/${filename}.json`)

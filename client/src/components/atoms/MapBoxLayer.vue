@@ -4,13 +4,6 @@
 
 <style lang="scss">
 @import "~mapbox-gl/dist/mapbox-gl.css";
-.a-map__layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 </style>
 
 
@@ -36,6 +29,7 @@ export default {
       const map = new mapboxgl.Map({
         attributionControl: false,
         container: 'map',
+        // style: 'mapbox://styles/jordyvanderhaegen/cju8q1e4n3qhs1gold0w3lxev',
         style: 'mapbox://styles/jordyvanderhaegen/cju8q1e4n3qhs1gold0w3lxev',
         interactive: false,
         center: [this.initialViewState.longitude, this.initialViewState.latitude],

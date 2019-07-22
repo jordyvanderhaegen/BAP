@@ -26,7 +26,7 @@ export class TroopsTimer extends Timer {
 
   /**
    * Overwrites the base class start
-   * 
+   *
    */
   start = async () => {
     console.log(`Starting with new data ${this.currentFilename}`)
@@ -37,15 +37,20 @@ export class TroopsTimer extends Timer {
     this.run()
   }
 
+  stop = () => {
+    this.timekeeper.stop()
+    this.timekeeper = null
+  }
+
   loadData = async () => {
-    const geodataCurrentDate = await import(`@/assets/data/${this.currentFilename}-troops.json`)
-    const geodataNextDate = await import(`@/assets/data/${this.nextFilename}-troops.json`)
+    const geodataCurrentDate = await import(`@/assets/data/${this.currentFilename}.json`)
+    const geodataNextDate = await import(`@/assets/data/${this.nextFilename}.json`)
 
     this.geodataNextDate = geodataNextDate.features
     this.geodataCurrentDate = geodataCurrentDate.features.map((feature) => {
-      const {id, front} = feature.properties
+      const {id, LN} = feature.properties
       const featureNextDate = geodataNextDate.features.find(feature =>
-        feature.properties.id == id && feature.properties.front == front
+        feature.properties.LN == LN
       );
       return {
         ...feature,
@@ -74,9 +79,9 @@ export class TroopsTimer extends Timer {
   }
 
   startAnimation = () => {
-    if (this.timekeeper) {
-      this.timekeeper.stop()
-    }
+    /* if (this.timekeeper) {
+      this.stop()
+    } */
 
     this.currentFrame = 0
     this.timekeeper = pstimer.pausableTimer(this.animationFrame)
@@ -85,7 +90,7 @@ export class TroopsTimer extends Timer {
 
   animationFrame = () => {
     if (this.currentFrame >= this.framesPerFetch) {
-      this.timekeeper.stop()
+      this.stop()
       return this.timeline.next()
     }
 
@@ -117,7 +122,7 @@ export class TroopsTimer extends Timer {
       radiusMinPixels: 2,
       radiusMaxPixels: 6,
       getPosition: d => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
-      getFillColor: d => this.getUnitColor(d.properties.country),
+      getFillColor: d => this.getUnitColor(d.properties.UC),
       getRadius: 1000
     })
   }
@@ -128,13 +133,13 @@ export class TroopsTimer extends Timer {
     const UK_COLOR = [32, 142, 201];
     const CA_COLOR = [221, 215, 215];
     switch (name) {
-      case 'GE':
+      case 'GMN':
         return GER_COLOR;
-      case 'CA':
-        return CA_COLOR;
       case 'UK':
+        return CA_COLOR;
+      case 'CAN':
         return UK_COLOR;
-      case 'US':
+      case 'USA':
         return ALLIED_COLOR;
       default:
         return ALLIED_COLOR;

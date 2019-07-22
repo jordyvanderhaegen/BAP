@@ -1,6 +1,6 @@
 <template>
   <div class="m-timeline__toolbar">
-    <OptionsButton 
+    <OptionsButton
       @click.native="toggleMenuToolbarModal()"
       :active="timelineToolbarModalOpen"
     />
@@ -8,21 +8,12 @@
     <PauseButton @click.native="pauseTimeline()" />
     <RestartButton @click.native="restartTimeline()" />
     <TimelineOptionsModal />
-    <button @click="logCamera()">log</button>
+    <!-- <button @click="logCamera()">log</button> -->
   </div>
 </template>
 
 <style lang="scss">
 .m-timeline__toolbar {
-  position: fixed;
-  right: 0;
-  bottom: 11vh;
-  z-index: layer('header');
-  padding: rem($space-sm);
-
-  @include at($screen-lg) {
-    padding: rem($space-md);
-  }
   div {
     margin: 10px 0;
   }

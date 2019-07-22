@@ -1,12 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import HomeView from './views/HomeView.vue';
-import EventDetail from './views/EventDetail.vue';
-import UnitDetail from './views/UnitDetail.vue';
-import TimelineStory from './components/molecules/TimelineStory.vue';
-import TimelineChapter from './components/molecules/TimelineChapter.vue';
-import PageNotFoundView from './views/PageNotFoundView.vue';
 
 Vue.use(Router);
 
@@ -16,14 +9,14 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: () => import('./views/HomeView.vue'),
       children: [
         {
           path: '/unitp/:id',
           name: 'unitp',
           components: {
-            page: HomeView,
-            unit: UnitDetail,
+            page: () => import('./views/HomeView.vue'),
+            unit: () => import('./views/UnitDetail.vue'),
           },
           meta: {
             showModal: true
@@ -33,8 +26,8 @@ export default new Router({
           path: '/timeline/story/:id',
           name: 'story',
           components: {
-            page: HomeView,
-            story: TimelineStory,
+            page: () => import('./views/HomeView.vue'),
+            story: () => import('./components/molecules/TimelineStory.vue'),
           },
           meta: {
             showModal: true
@@ -44,8 +37,8 @@ export default new Router({
           path: '/timeline/chapter/:id',
           name: 'chapter',
           components: {
-            page: HomeView,
-            story: TimelineChapter,
+            page: () => import('./views/HomeView.vue'),
+            story: () => import('./components/molecules/TimelineChapter.vue'),
           },
           meta: {
             showModal: true
@@ -56,17 +49,17 @@ export default new Router({
     {
       path: '/event/:id',
       name: 'event',
-      component: EventDetail,
+      component: () => import('./views/EventDetail.vue'),
     },
     {
       path: '/unit/:id',
       name: 'unit',
-      component: UnitDetail,
+      component: () => import('./views/UnitDetail.vue'),
     },
-    { 
+    {
       path: "*",
       name: 'not-found',
-      component: PageNotFoundView
+      component: () => import('./views/PageNotFoundView.vue'),
     }
     /* {
       path: '/about',
