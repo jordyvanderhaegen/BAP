@@ -7,9 +7,10 @@
 <style lang="scss">
 .o-content-container {
   flex-grow: 1;
-  max-height: 100vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
 }
 </style>
 

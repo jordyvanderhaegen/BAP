@@ -8,17 +8,21 @@
 .m-content__modal {
   background: $background-color-primary;
   color: white;
-  /* position: absolute;
-  bottom: 0; */
   padding: $space-md;
-  margin: $space-xl;
-  z-index: layer('header');
+  margin: $space-md;
+  overflow-y: auto;
+  z-index: layer("header");
+
+  @include at($screen-xl) {
+    margin: $space-xl;
+  }
 }
 
 .m-progress-bar {
   margin-top: $space-sm;
 }
-.a-modal__description, .a-modal__synopsis {
+.a-modal__description,
+.a-modal__synopsis {
   font-family: $font-family-regular;
   font-size: rem($font-size-small);
   line-height: 1.7em;

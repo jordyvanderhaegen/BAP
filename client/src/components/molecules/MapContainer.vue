@@ -11,9 +11,11 @@
 
 <style lang="scss">
 .m-map__container {
-  height: 100vh;
-  flex-grow: 1;
-  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
 </style>
 

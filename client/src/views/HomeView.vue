@@ -11,6 +11,7 @@
 <style lang="scss">
 .l-home {
   display: flex;
+  max-height: 100vh;
 }
 </style>
 
