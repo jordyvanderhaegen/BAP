@@ -12,6 +12,7 @@
 .l-home {
   display: flex;
   max-height: 100vh;
+  overflow: hidden;
 }
 </style>
 
