@@ -13,7 +13,7 @@
     Non debitis delectus quae eum, minus ex eos doloribus in quidem qui iusto tempore. Saepe nihil repudiandae animi molestiae porro soluta harum officiis facere laborum, voluptas, deserunt quo voluptatum fugit!
     Error sunt ea vel incidunt maiores voluptates adipisci, voluptas sint nam aliquid! Velit exercitationem repudiandae veniam aut labore quisquam doloremque natus, eveniet voluptatibus quis fugiat mollitia. Quas, repellendus ipsa? Omnis.
     Doloribus culpa illo voluptates exercitationem ducimus sint. Exercitationem laboriosam voluptatibus debitis et incidunt ea dignissimos impedit facilis voluptatum reiciendis temporibus blanditiis mollitia non perferendis, at, voluptate nihil ab provident quibusdam!</p>
-    <ProgressBar :percentage="percentage"/>
+    <ProgressBar :duration="percentage"/>
   </ContentModal>
   </transition>
 </template>
