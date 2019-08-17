@@ -6,7 +6,7 @@
 <script>
 import { Deck, FlyToInterpolator } from '@deck.gl/core';
 import { ScatterplotLayer } from '@deck.gl/layers';
-import { mapMutations } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 import * as d3 from 'd3';
 import * as pstimer from '@/assets/js/timer.js'
 import timelineDates from '@/assets/data/map.json';
@@ -28,6 +28,9 @@ export default {
   },
   mounted() {
     this.initDeck()
+  },
+  computed: {
+    ...mapState('timeline', ['map'])
   },
   methods: {
     ...mapMutations('timeline', ['setDeck']),
