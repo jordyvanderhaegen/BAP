@@ -14,6 +14,11 @@
 import { Line } from 'progressbar.js'
 export default {
   name: 'm-progress-bar',
+  data() {
+    return {
+      line: null,
+    }
+  },
   props: {
     duration: {
       type: Number,
@@ -21,7 +26,7 @@ export default {
     }
   },
   mounted() {
-    const line = new Line(this.$el, {
+    this.line = new Line(this.$el, {
       strokeWidth: 3,
       duration: this.duration,
       color: 'white',
@@ -29,7 +34,17 @@ export default {
       trailWidth: 1,
       svgStyle: {width: '100%', height: '100%'}
     })
-    line.animate(1)
+    this.play()
+  },
+  methods: {
+    pause() {
+      this.line.stop()
+    },
+    play() {
+      this.line.animate(1, {
+        duration: this.duration
+      })
+    }
   }
 }
 </script>

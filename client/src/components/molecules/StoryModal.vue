@@ -13,7 +13,7 @@
     Non debitis delectus quae eum, minus ex eos doloribus in quidem qui iusto tempore. Saepe nihil repudiandae animi molestiae porro soluta harum officiis facere laborum, voluptas, deserunt quo voluptatum fugit!
     Error sunt ea vel incidunt maiores voluptates adipisci, voluptas sint nam aliquid! Velit exercitationem repudiandae veniam aut labore quisquam doloremque natus, eveniet voluptatibus quis fugiat mollitia. Quas, repellendus ipsa? Omnis.
     Doloribus culpa illo voluptates exercitationem ducimus sint. Exercitationem laboriosam voluptatibus debitis et incidunt ea dignissimos impedit facilis voluptatum reiciendis temporibus blanditiis mollitia non perferendis, at, voluptate nihil ab provident quibusdam!</p>
-    <ProgressBar :duration="percentage"/>
+    <ProgressBar :duration="duration" ref="progressBar"/>
   </ContentModal>
   </transition>
 </template>
@@ -39,14 +39,27 @@ import ContentModal from '@/components/molecules/ContentModal.vue';
 import ProgressBar from '@/components/molecules/ProgressBar.vue';
 import { TweenMax, TimelineMax } from 'gsap';
 import { setTimeout, setInterval } from 'timers';
+import { mapState } from 'vuex';
 
 export default {
   name: 'm-storymodal',
   data() {
     return {
       animation: null,
-      percentage: 0
     };
+  },
+  computed: {
+    ...mapState('modal', ['duration']),
+    ...mapState('timeline', ['timelinePlayingState']),
+  },
+  watch: {
+    timelinePlayingState: function(val) {
+      if (val == 'PAUSED') {
+        this.$refs.progressBar.pause()
+      } else if (val == 'PLAYING') {
+        this.$refs.progressBar.play()
+      }
+    }
   },
   components: {
     ContentModal,
