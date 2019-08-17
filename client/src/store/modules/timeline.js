@@ -2,6 +2,11 @@ import timelineDates from '@/assets/data/map.json';
 import { Timeline } from '@/assets/js/timer/index.js';
 import chapters from '@/assets/data/chapters.json';
 
+const TIMELINE_PLAYING_STATE = {
+  PLAYING: 'PLAYING',
+  PAUSED: 'PAUSED',
+}
+
 export default {
   namespaced: true,
 
@@ -15,6 +20,7 @@ export default {
     tooltipPos: {x: 0, y: 1 },
     timelineDates,
     showCasualties: false,
+    timelinePlayingState: null,
   },
 
   mutations: {
@@ -55,6 +61,7 @@ export default {
      */
     playTimeline(state) {
       state.timeline.play();
+      state.timelinePlayingState = TIMELINE_PLAYING_STATE.PLAYING;
     },
 
     /**
@@ -62,6 +69,7 @@ export default {
      */
     pauseTimeline(state) {
       state.timeline.pause();
+      state.timelinePlayingState = TIMELINE_PLAYING_STATE.PAUSED;
     },
 
     /**

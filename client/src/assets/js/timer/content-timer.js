@@ -1,6 +1,6 @@
 import { Timer } from './timer'
 import * as moment from 'moment'
-import router from '@/router.js';
+import store from '@/store/index.js';
 
 export class ContentTimer extends Timer {
   constructor(duration, timeline, contentId) {
@@ -19,7 +19,7 @@ export class ContentTimer extends Timer {
     this.run()
     this.timeout = setTimeout(() => {
       this.timeline.next()
-      router.push('/')
+      store.commit('modal/hideModal')
     }, this.duration)
   }
 
@@ -29,7 +29,8 @@ export class ContentTimer extends Timer {
    */
   run = () => {
     console.log(`Starting content timer ${this.duration}`)
-    router.push('/timeline/story/' + this.contentId)
+    store.commit('modal/showModal')
+    store.commit('modal/setDuration', this.duration)
   }
 
   /**
@@ -40,6 +41,7 @@ export class ContentTimer extends Timer {
     const diff = moment.duration(moment().diff(this.startTime))
     this.duration -= diff.asMilliseconds()
     clearTimeout(this.timeout)
+    store.commit('modal/setDuration', this.duration)
   }
 
 }

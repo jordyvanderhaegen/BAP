@@ -3,7 +3,7 @@
     <NavBar />
     <ContentContainer>
       <MapContainer />
-      <StoryModal />
+      <StoryModal v-if="modalVisible"/>
     </ContentContainer>
   </div>
 </template>
@@ -21,6 +21,7 @@ import MapContainer from '@/components/molecules/MapContainer.vue';
 import NavBar from '@/components/molecules/NavBar.vue';
 import ContentContainer from '@/components/organisms/ContentContainer.vue';
 import StoryModal from '@/components/molecules/StoryModal.vue';
+import { mapState } from 'vuex';
 
 export default {
   name: 'home-view',
@@ -30,15 +31,8 @@ export default {
     ContentContainer,
     StoryModal,
   },
-  data() {
-    return {
-      showModal: this.$route.meta.showModal
-    };
+  computed: {
+    ...mapState('modal', ['modalVisible'])
   },
-  watch: {
-    '$route.meta'({ showModal }) {
-      this.showModal = showModal
-    }
-  }
 }
 </script>
