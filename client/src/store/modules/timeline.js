@@ -17,7 +17,7 @@ export default {
     deck: null,
     activeDateId: 1,
     cameraLocked: true,
-    tooltipPos: {x: 0, y: 1 },
+    tooltip: {},
     timelineDates,
     showCasualties: false,
     timelinePlayingState: null,
@@ -93,8 +93,8 @@ export default {
     setCameraLocked(state, bool) {
       state.cameraLocked = bool;
     },
-    setTooltipPos(state, pos) {
-      state.tooltipPos = pos
+    setTooltip(state, pos) {
+      state.tooltip = pos
     },
     setShowCasualties(state, bool) {
       state.showCasualties = bool;

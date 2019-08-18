@@ -1,4 +1,5 @@
 import { ScatterplotLayer, GeoJsonLayer } from "@deck.gl/layers";
+import store from '@/store/index.js';
 
 /**
  * Deck.GL functions
@@ -15,6 +16,7 @@ export function createScatterPlotLayer(data) {
     radiusMaxPixels: 8,
     getPosition: d => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
     getFillColor: d => getUnitColor(d.properties.unit_country),
+    onHover: d => store.commit('timeline/setTooltip', {x: d.x, y: d.y, object: d.object}),
     getRadius: 1000
   })
 }

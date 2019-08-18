@@ -26,7 +26,7 @@ import { mapState } from 'vuex';
 export default {
   name: 'a-deck-tooltip',
   computed: {
-    ...mapState('timeline', ['tooltipPos'])
+    ...mapState('timeline', ['tooltip'])
   },
   data() {
     return {
@@ -37,30 +37,14 @@ export default {
     }
   },
   watch: {
-    tooltipPos(val) {
+    tooltip(val) {
       if (!val.object) { return this.visible = false }
       const { x, y, object} = val
       this.x = x
       this.y = y
-      this.title = object.properties.name
+      this.title = object.properties.unit_name
       this.visible = true
     }
   },
-  mounted() {
-  }
-  /* props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    x: {
-      type: Number,
-      required: true,
-    },
-    y: {
-      type: Number,
-      required: true,
-    }
-  } */
 }
 </script>
