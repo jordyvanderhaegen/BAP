@@ -24,4 +24,4 @@ Vue.filter('formatDate', (value) => {
 /**
  * Global css reset
  */
-// import '@/assets/styles/styles.scss'
+import '@/assets/styles/styles.scss'
