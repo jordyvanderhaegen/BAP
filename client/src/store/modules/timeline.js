@@ -72,6 +72,14 @@ export default {
       state.timelinePlayingState = TIMELINE_PLAYING_STATE.PAUSED;
     },
 
+    previousTimelineItem(state) {
+      state.timeline.previous()
+    },
+
+    nextTimelineItem(state) {
+      state.timeline.next();
+    },
+
     /**
      * Calls the restart function on the timeline instance
      */

@@ -5,6 +5,7 @@ import { CameraTimer } from './camera-timer';
 import { JSONTimer } from './json-timer';
 import chapters from '@/assets/data/chapters.json';
 import { ChapterTimer } from './chapter-timer';
+import { StaticDeckTimer } from './static-deck-timer';
 import store from '@/store/index.js';
 
 export class Timeline {
@@ -19,7 +20,6 @@ export class Timeline {
    */
   next = () => {
     this.activeItemIndex++
-    console.log(this.getActiveChapter())
     this.play()
   }
 
@@ -29,7 +29,7 @@ export class Timeline {
    */
   previous = () => {
     this.activeItemIndex--
-    this.play
+    this.play()
   }
 
   /**
@@ -128,6 +128,13 @@ export class Timeline {
    */
   addTroops = (duration, currentDate, nextDate, cameraId) => {
     this.items.push(new TroopsTimer(duration, this, 60, currentDate, nextDate, cameraId))
+  /**
+   * Add a static deck timer to the items list
+   * @param duration
+   * @param fileName
+   */
+  addStaticDeck = (duration, fileName) => {
+    this.items.push(new StaticDeckTimer(duration, this, fileName))
   }
 
   /**
@@ -158,7 +165,7 @@ export class Timeline {
     const timeline = await import(`@/assets/data/${filename}.json`)
 
     timeline.default.forEach(item => {
-      const { refId, duration, startDate, endDate, cameraId } = item
+      const { refId, duration, startDate, endDate, cameraId, filename } = item
       switch (item.type) {
         case 'camera':
           return this.addCamera(duration, refId)
@@ -168,6 +175,8 @@ export class Timeline {
           return this.addChapter(duration, refId)
         case 'troops':
           return this.addTroops(duration, startDate, endDate, cameraId)
+        case 'static-deck':
+          return this.addStaticDeck(duration, filename)
         default:
           return this.addTimer(duration)
       }

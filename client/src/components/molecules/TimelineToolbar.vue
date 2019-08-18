@@ -4,8 +4,10 @@
       @click.native="toggleMenuToolbarModal()"
       :active="timelineToolbarModalOpen"
     />
-    <PlayButton @click.native="playTimeline()" />
-    <PauseButton @click.native="pauseTimeline()" />
+    <PreviousButton @click.native="previousTimelineItem()" />
+    <NextButton @click.native="nextTimelineItem()"/>
+    <PlayButton @click.native="playTimeline()" v-if="timelinePlayingState == 'PAUSED'" />
+    <PauseButton @click.native="pauseTimeline()" v-if="timelinePlayingState == 'PLAYING'" />
     <RestartButton @click.native="restartTimeline()" />
     <TimelineOptionsModal />
     <!-- <button @click="logCamera()">log</button> -->
@@ -25,6 +27,8 @@ import PlayButton from '@/components/atoms/PlayButton.vue';
 import PauseButton from '@/components/atoms/PauseButton.vue';
 import OptionsButton from '@/components/atoms/OptionsButton.vue';
 import RestartButton from '@/components/atoms/RestartButton.vue';
+import NextButton from '@/components/atoms/NextButton.vue';
+import PreviousButton from '@/components/atoms/PreviousButton.vue';
 import TimelineOptionsModal from '@/components/molecules/TimelineOptionsModal.vue';
 import { mapMutations, mapState } from 'vuex';
 
@@ -36,14 +40,16 @@ export default {
     OptionsButton,
     RestartButton,
     TimelineOptionsModal,
+    NextButton,
+    PreviousButton
   },
   computed: {
     ...mapState('ui', ['timelineToolbarModalOpen']),
-    ...mapState('timeline', ['timer']),
+    ...mapState('timeline', ['timer', 'timelinePlayingState']),
   },
   methods: {
     ...mapMutations('ui', ['toggleMenuToolbarModal']),
-    ...mapMutations('timeline', ['restartTimeline', 'pauseTimeline', 'playTimeline']),
+    ...mapMutations('timeline', ['restartTimeline', 'pauseTimeline', 'playTimeline', 'previousTimelineItem', 'nextTimelineItem']),
     logCamera() {
       /* console.log(JSON.stringify(this.$store.state.timeline.deck.viewState['default-view'])) */
       console.log(this.timer)
