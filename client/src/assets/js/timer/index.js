@@ -128,6 +128,7 @@ export class Timeline {
    */
   addTroops = (duration, currentDate, nextDate, cameraId) => {
     this.items.push(new TroopsTimer(duration, this, 60, currentDate, nextDate, cameraId))
+  }
   /**
    * Add a static deck timer to the items list
    * @param duration
