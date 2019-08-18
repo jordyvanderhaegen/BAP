@@ -5,7 +5,6 @@
     <TimelineInformation />
     <MapBoxLayer :initialViewState="initialViewState" />
     <DeckLayer :initialViewState="initialViewState" />
-    <TestComponent />
   </div>
 </template>
 
@@ -25,7 +24,6 @@ import DeckTooltip from '@/components/atoms/DeckTooltip.vue';
 import MapBoxLayer from '@/components/atoms/MapBoxLayer.vue';
 import MapFrameLayer from '@/components/atoms/MapFrameLayer.vue';
 import TimelineInformation from '@/components/atoms/TimelineInformation.vue';
-import TestComponent from '@/components/atoms/TestComponent.vue';
 
 export default {
   name: 'm-map-container',
@@ -46,7 +44,6 @@ export default {
     MapFrameLayer,
     DeckTooltip,
     TimelineInformation,
-    TestComponent
   }
 }
 </script>
