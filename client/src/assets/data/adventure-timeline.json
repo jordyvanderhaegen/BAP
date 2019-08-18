@@ -1,0 +1,624 @@
+[
+  {
+    "type": "content",
+    "duration": 8000,
+    "refId": 1
+  },
+  {
+    "type": "camera",
+    "duration": 2000,
+    "refId": 1
+  },
+  {
+    "type": "camera",
+    "duration": 2000,
+    "refId": 2
+  },
+  {
+    "type": "troops",
+    "duration": 4000,
+    "startDate": "1944-06-06",
+    "endDate": "1944-06-07",
+    "cameraId": 3
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-07",
+    "endDate": "1944-06-08",
+    "cameraId": 4
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-08",
+    "endDate": "1944-06-09",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-09",
+    "endDate": "1944-06-10",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-10",
+    "endDate": "1944-06-11",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-11",
+    "endDate": "1944-06-12",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-12",
+    "endDate": "1944-06-13",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-13",
+    "endDate": "1944-06-14",
+    "cameraId": 5
+  },
+  {
+    "type": "content",
+    "duration": 2000,
+    "refId": 3
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-14",
+    "endDate": "1944-06-15",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-15",
+    "endDate": "1944-06-16",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-16",
+    "endDate": "1944-06-17",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-17",
+    "endDate": "1944-06-18",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-18",
+    "endDate": "1944-06-19",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-19",
+    "endDate": "1944-06-20",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-20",
+    "endDate": "1944-06-21",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-21",
+    "endDate": "1944-06-22",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-22",
+    "endDate": "1944-06-23",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-23",
+    "endDate": "1944-06-24",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-24",
+    "endDate": "1944-06-25",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-25",
+    "endDate": "1944-06-26",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-26",
+    "endDate": "1944-06-27",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-27",
+    "endDate": "1944-06-28",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-28",
+    "endDate": "1944-06-29",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-29",
+    "endDate": "1944-06-30",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-06-30",
+    "endDate": "1944-07-01",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-01",
+    "endDate": "1944-07-02",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-02",
+    "endDate": "1944-07-03",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-03",
+    "endDate": "1944-07-04",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-04",
+    "endDate": "1944-07-05",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-05",
+    "endDate": "1944-07-06",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-06",
+    "endDate": "1944-07-07",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-07",
+    "endDate": "1944-07-08",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-08",
+    "endDate": "1944-07-09",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-09",
+    "endDate": "1944-07-10",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-10",
+    "endDate": "1944-07-11",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-11",
+    "endDate": "1944-07-12",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-12",
+    "endDate": "1944-07-13",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-13",
+    "endDate": "1944-07-14",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-14",
+    "endDate": "1944-07-15",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-15",
+    "endDate": "1944-07-16",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-16",
+    "endDate": "1944-07-17",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-17",
+    "endDate": "1944-07-18",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-18",
+    "endDate": "1944-07-19",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-19",
+    "endDate": "1944-07-20",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-20",
+    "endDate": "1944-07-21",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-21",
+    "endDate": "1944-07-22",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-22",
+    "endDate": "1944-07-23",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-23",
+    "endDate": "1944-07-24",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-24",
+    "endDate": "1944-07-25",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-25",
+    "endDate": "1944-07-26",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-26",
+    "endDate": "1944-07-27",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-27",
+    "endDate": "1944-07-28",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-28",
+    "endDate": "1944-07-29",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-29",
+    "endDate": "1944-07-30",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-30",
+    "endDate": "1944-07-31",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-07-31",
+    "endDate": "1944-08-01",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-01",
+    "endDate": "1944-08-02",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-02",
+    "endDate": "1944-08-03",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-03",
+    "endDate": "1944-08-04",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-04",
+    "endDate": "1944-08-05",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-05",
+    "endDate": "1944-08-06",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-06",
+    "endDate": "1944-08-07",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-07",
+    "endDate": "1944-08-08",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-08",
+    "endDate": "1944-08-09",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-09",
+    "endDate": "1944-08-10",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-10",
+    "endDate": "1944-08-11",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-11",
+    "endDate": "1944-08-12",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-12",
+    "endDate": "1944-08-13",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-13",
+    "endDate": "1944-08-14",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-14",
+    "endDate": "1944-08-15",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-15",
+    "endDate": "1944-08-16",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-16",
+    "endDate": "1944-08-17",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-17",
+    "endDate": "1944-08-18",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-18",
+    "endDate": "1944-08-19",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-19",
+    "endDate": "1944-08-20",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-20",
+    "endDate": "1944-08-21",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-21",
+    "endDate": "1944-08-22",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-22",
+    "endDate": "1944-08-23",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-23",
+    "endDate": "1944-08-24",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-24",
+    "endDate": "1944-08-25",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-25",
+    "endDate": "1944-08-26",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-26",
+    "endDate": "1944-08-27",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-27",
+    "endDate": "1944-08-28",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-28",
+    "endDate": "1944-08-29",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-29",
+    "endDate": "1944-08-30",
+    "cameraId": 5
+  },
+  {
+    "type": "troops",
+    "duration": 2000,
+    "startDate": "1944-08-30",
+    "endDate": "1944-08-31",
+    "cameraId": 5
+  }
+]

@@ -1,5 +1,5 @@
 <template>
-  <div class="l-home">
+  <div class="l-map">
     <NavBar />
     <ContentContainer>
       <MapContainer />
@@ -9,7 +9,7 @@
 </template>
 
 <style lang="scss">
-.l-home {
+.l-map {
   display: flex;
   max-height: 100vh;
   overflow: hidden;
@@ -24,7 +24,7 @@ import StoryModal from '@/components/molecules/StoryModal.vue';
 import { mapState } from 'vuex';
 
 export default {
-  name: 'home-view',
+  name: 'l-map',
   components: {
     MapContainer,
     NavBar,

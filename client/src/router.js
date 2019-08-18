@@ -9,42 +9,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: () => import('./views/HomeView.vue'),
-      children: [
-        {
-          path: '/unitp/:id',
-          name: 'unitp',
-          components: {
-            page: () => import('./views/HomeView.vue'),
-            unit: () => import('./views/UnitDetail.vue'),
-          },
-          meta: {
-            showModal: true
-          }
-        },
-        {
-          path: '/timeline/story/:id',
-          name: 'story',
-          components: {
-            page: () => import('./views/HomeView.vue'),
-            story: () => import('./components/molecules/TimelineStory.vue'),
-          },
-          meta: {
-            showModal: true
-          }
-        },
-        {
-          path: '/timeline/chapter/:id',
-          name: 'chapter',
-          components: {
-            page: () => import('./views/HomeView.vue'),
-            story: () => import('./components/molecules/TimelineChapter.vue'),
-          },
-          meta: {
-            showModal: true
-          }
-        }
-      ]
+      component: () => import('./views/Home.vue'),
     },
     {
       path: '/event/:id',
@@ -55,6 +20,16 @@ export default new Router({
       path: '/unit/:id',
       name: 'unit',
       component: () => import('./views/UnitDetail.vue'),
+    },
+    {
+      path: '/discover',
+      name: 'discover',
+      component: () => import('./views/Discover.vue'),
+    },
+    {
+      path: '/adventure',
+      name: 'adventure',
+      component: () => import('./views/Adventure.vue'),
     },
     {
       path: "*",
