@@ -613,12 +613,5 @@
     "startDate": "1944-08-29",
     "endDate": "1944-08-30",
     "cameraId": 5
-  },
-  {
-    "type": "troops",
-    "duration": 2000,
-    "startDate": "1944-08-30",
-    "endDate": "1944-08-31",
-    "cameraId": 5
   }
 ]
