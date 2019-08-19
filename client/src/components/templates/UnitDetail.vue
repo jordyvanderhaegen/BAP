@@ -43,7 +43,7 @@
     </div>
     <div class="l-unit-detail__images">
       <ImageGridList
-        v-if="imageIndexes.length"
+        v-if="imageIndexes && imageIndexes.length"
         :images="imageIndexes"
       />
     </div>
@@ -139,6 +139,7 @@ export default {
   },
   created() {
     const unit = this.findUnit(this.$route.params.id)
+    
     if (!unit) return this.$router.push('/not-found')
     this.coverImageIndex = unit.coverImage
     this.imageIndexes = unit.images

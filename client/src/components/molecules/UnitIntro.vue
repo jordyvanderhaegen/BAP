@@ -50,7 +50,7 @@
 // Wikipedia
 .a-unit__intro-description {
   .box-Refimprove_section, figure, figure-inline {
-  display: none;
+    display: none;
   }
   a {
     color: white;

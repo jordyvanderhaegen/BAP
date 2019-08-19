@@ -5,6 +5,7 @@ export default {
     menuTl: null,
     menuImageIndex: null,
     timelineToolbarModalOpen: false,
+    modalOpen: false,
   },
   mutations: {
     toggleMenu(state) {
@@ -19,5 +20,8 @@ export default {
     toggleMenuToolbarModal(state) {
       state.timelineToolbarModalOpen = !state.timelineToolbarModalOpen;
     },
+    toggleModal(state) {
+      state.modalOpen = !state.modalOpen
+    }
   },
 };

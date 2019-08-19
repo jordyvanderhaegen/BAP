@@ -29,6 +29,7 @@ export default {
       const map = new mapboxgl.Map({
         attributionControl: false,
         container: 'map',
+        // style: 'mapbox://styles/jordyvanderhaegen/cju8q1e4n3qhs1gold0w3lxev',
         style: 'mapbox://styles/jordyvanderhaegen/cju8q1e4n3qhs1gold0w3lxev',
         interactive: false,
         center: [this.initialViewState.longitude, this.initialViewState.latitude],

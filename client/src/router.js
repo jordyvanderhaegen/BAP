@@ -1,10 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import HomeView from './views/HomeView.vue';
-import EventDetail from './views/EventDetail.vue';
-import UnitDetail from './views/UnitDetail.vue';
-import PageNotFoundView from './views/PageNotFoundView.vue';
 
 Vue.use(Router);
 
@@ -14,22 +9,32 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: () => import('./views/Home.vue'),
     },
     {
       path: '/event/:id',
       name: 'event',
-      component: EventDetail,
+      component: () => import('./views/EventDetail.vue'),
     },
     {
       path: '/unit/:id',
       name: 'unit',
-      component: UnitDetail,
+      component: () => import('./views/UnitDetail.vue'),
     },
-    { 
+    {
+      path: '/discover',
+      name: 'discover',
+      component: () => import('./views/Discover.vue'),
+    },
+    {
+      path: '/adventure',
+      name: 'adventure',
+      component: () => import('./views/Adventure.vue'),
+    },
+    {
       path: "*",
       name: 'not-found',
-      component: PageNotFoundView
+      component: () => import('./views/PageNotFoundView.vue'),
     }
     /* {
       path: '/about',

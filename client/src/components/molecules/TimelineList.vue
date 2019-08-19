@@ -4,6 +4,7 @@
       v-for="index in dataCount"
       :key="index"
       :index="index"
+      :active="index == activeChapterIndex"
     />
   </div>
 </template>
@@ -22,7 +23,7 @@
 
 <script>
 import TimelineItem from '@/components/atoms/TimelineItem.vue';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 
 export default {
   name: 'o-timeline-list',
@@ -31,6 +32,7 @@ export default {
   },
   computed: {
     ...mapGetters('chapters', ['dataCount']),
+    ...mapGetters('timeline', ['activeChapterIndex']),
   },
 }
 </script>

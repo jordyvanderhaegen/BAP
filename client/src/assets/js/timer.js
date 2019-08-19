@@ -12,6 +12,7 @@ var frame = 0, // is an animation frame pending?
 
 export function now() {
   return clockNow || (setFrame(clearNow), clockNow = clock.now() + clockSkew);
+  
 }
 
 function clearNow() {
