@@ -1,7 +1,7 @@
 <template>
   <div class="t-menu">
     <MenuContent/>
-    <BaseActionButton class="a-menu__btn" @click.native="$store.commit('ui/toggleMenu')"/>
+    <CloseButton class="a-menu__btn" @click.native="$store.commit('ui/toggleMenu')"/>
   </div>
 </template>
 
@@ -12,14 +12,15 @@
   background: $background-color-primary;
   position: fixed;
   right: 0;
+  top: 0;
   z-index: layer("header");
-  padding: 3.2rem;
+  padding: rem($space-md);
   display: flex;
 }
 </style>
 
 <script>
-import BaseActionButton from '@/components/BaseActionButton.vue';
+import CloseButton from '@/components/atoms/CloseButton.vue';
 import MenuContent from '@/components/organisms/MenuContent.vue';
 import { TweenMax, Power4, TimelineMax } from 'gsap';
 import { mapState } from 'vuex';
@@ -27,7 +28,7 @@ import { mapState } from 'vuex';
 export default {
   name: 't-menu',
   components: {
-    BaseActionButton,
+    CloseButton,
     MenuContent,
   },
   computed: {
@@ -39,9 +40,13 @@ export default {
     },
   },
   mounted() {
-    TweenMax.set(this.$el, {
-      x: this.$el.offsetWidth,
-    });
+    this.setMenuOffset()
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.setMenuOffset)
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.setMenuOffset)
   },
   methods: {
     openMenu() {
@@ -56,6 +61,11 @@ export default {
     closeMenu() {
       this.menuTl.reverse(2);
     },
+    setMenuOffset() {
+      TweenMax.set(this.$el, {
+        x: this.$el.offsetWidth,
+      });
+    }
   },
 };
 </script>

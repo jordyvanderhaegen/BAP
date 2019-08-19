@@ -8,20 +8,24 @@
 
 <style lang="scss">
 .m-event__intro {
-  padding: 5.4rem;
+  padding: rem($space-xl);
   color: $text-color-primary;
+
   @include to($screen-md) {
     padding: 2.9rem;
   }
+
   @include to($screen-sm) {
     padding: 1.45rem;
   }
+
 }
 .a-event__intro-title {
   font-family: $font-family-headings;
   font-size: rem($font-size-xl);
   font-weight: 700;
-  margin-bottom: 1.15rem;
+  margin-bottom: rem($space-xs);
+  margin-top: rem($space-xs);
 }
 .a-event__intro-date {
   font-family: $font-family-headings;

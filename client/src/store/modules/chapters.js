@@ -3,10 +3,12 @@ import images from '@/assets/data/images.json';
 
 export default {
   namespaced: true,
+
   state: {
     chapters,
     images,
   },
+
   getters: {
     dataCount: state => state.chapters.length,
     dataTitles: state => state.chapters.map(item => item.title),

@@ -3,30 +3,549 @@
     "id": 1,
     "location": "Normandië",
     "date": "03-12-1994",
-    "src": "https://www.nps.gov/articles/images/002_1_1.jpg"
+    "src": "https://www.nps.gov/articles/images/002_1_1.jpg",
+    "origin": {
+      "source":"unknown",
+      "id": "unknown",
+      "originator": "unknown"
+    }
   },
   {
     "id": 2,
     "location": "Omaha beach",
     "date": "04-12-1994",
-    "src": "https://www.theschoolrun.com/sites/theschoolrun.com/files/worldwariiplanes.jpg"
+    "src": "https://www.theschoolrun.com/sites/theschoolrun.com/files/worldwariiplanes.jpg",
+    "origin": {
+      "source":"unknown",
+      "id": "unknown",
+      "originator": "unknown"
+    }
   },
   {
     "id": 3,
     "location": "Omaha beach",
     "date": "04-12-1994",
-    "src": "https://cdn.activly.com/wp-content/uploads/2016/11/w09_06010153.jpg"
+    "src": "https://cdn.activly.com/wp-content/uploads/2016/11/w09_06010153.jpg",
+    "origin": {
+      "source":"unknown",
+      "id": "unknown",
+      "originator": "unknown"
+    }
   },
   {
     "id": 4,
     "location": "Paris, France",
     "date": "04-12-1994",
-    "src": "https://i.pinimg.com/originals/a6/dd/51/a6dd51972acf269e0ef454ac40246771.jpg"
+    "src": "https://i.pinimg.com/originals/a6/dd/51/a6dd51972acf269e0ef454ac40246771.jpg",
+    "origin": {
+      "source":"unknown",
+      "id": "unknown",
+      "originator": "unknown"
+    }
   },
   {
     "id": 5,
     "location": "Omaha beach",
-    "date": "04-12-1994",
-    "src": "http://4.bp.blogspot.com/-vGZZEaJDAHQ/UyYHMuRPKdI/AAAAAAAAIz4/T_5qTukilxg/s1600/Berlin+in+1945.jpg"
+    "date": "03-12-1945",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (BU 8573)",
+      "originator": "Hewitt (Sgt), No 5 Army Film & Photographic Unit"
+    },
+    "title": "The Reichstag after the allied bombing of Berlin.",
+    "localSrc": "5.jpg"
+  },
+  {
+    "id": 6,
+    "location": "Arriving at Utah Beach",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"The National WWII Museum",
+      "id": "unknown",
+      "originator": "unknown"
+    },
+    "title": "Landing craft headed for Utah Beach with soldiers from the 4th Infantry Division and also from the 101st Airborne Division.",
+    "localSrc": "6.jpg"
+  },
+  {
+    "id": 7,
+    "location": "St. Martin-de-Varreville",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"unknown",
+      "id": "unknown",
+      "originator": "unknown"
+    },
+    "title": "Wading through the inundations, elements of the 22d Infantry spent several hours in these watery stretches before reaching solid ground in the vicinity of St. Martin-de-Varreville. The northern causeways were either impassable or under enemy fire.",
+    "localSrc": "7.jpg"
+  },
+  {
+    "id": 8,
+    "location": "Baudienville",
+    "date": "07-06-1994",
+    "origin": {
+      "source":"unknown",
+      "id": "unknown",
+      "originator": "unknown"
+    },
+    "title": "GI's of 22nd Infantry Regiment, resting for few moments outside a cafe in Baudienville, village lies just under 2.5 Km NE of Sainte-Mère-Église, Normandy, France.",
+    "localSrc": "8.jpg"
+  },
+  {
+    "id": 9,
+    "location": "Baudienville",
+    "date": "17-07-1994",
+    "origin": {
+      "source":"U.S. Army Signal Corps",
+      "id": "SC-244296",
+      "originator": "unknown"
+    },
+    "title": "Six Silver Star Medal awardees of the 22nd Infantry, France July 17, 1944.",
+    "localSrc": "9.jpg"
+  },
+  {
+    "id": 10,
+    "location": "Location unknown",
+    "date": "16-07-1994",
+    "origin": {
+      "source":"U.S. Army Signal Corps",
+      "id": "SC 192068",
+      "originator": "unknown"
+    },
+    "title": "Pvt. Ward Watley, Halecenter, Texas looks over one of two Mark-5 tanks they knocked out with bazookas during a German attack, somewhere in France, July 16, 1944.",
+    "localSrc": "10.jpg"
+  },
+  {
+    "id": 11,
+    "location": "Royal Air Force Greenham Common",
+    "date": "05-06-1994",
+    "src": "https://sweetwaterreporter.com/sites/default/files/field/image/bw-D-Day2.jpg",
+    "origin": {
+      "source":"National Archives USA",
+      "id": "unknown",
+      "originator": "unknown"
+    },
+    "localSrc": "11.jpg"
+  },
+  {
+    "id": 12,
+    "location": "Royal Air Force Greenham Common",
+    "date": "05-06-1994",
+    "origin": {
+      "source":"Library of Congress",
+      "id": "cph.3a26521",
+      "originator": "unknown"
+    },
+    "title": "General Eisenhower talking with American paratroopers on the evening of June 5, 1944, as they prepared for the Battle of Normandy.",
+    "localSrc": "12.jpg"
+  },
+  {
+    "id": 13,
+    "location": "Underway to Normandy",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"unknown",
+      "id": "unknown",
+      "originator": "unknown"
+    },
+    "title": "F Company, 2nd Battalion, 506th PIR, 101st Airborne Division underway to Normandy aboard there C-47 #12 of the 439th Troop Carrier Group from 'Upottery'.",
+    "localSrc": "13.jpg"
+  },
+  {
+    "id": 14,
+    "location": "Somewhere in England",
+    "date": "05-06-1994",
+    "origin": {
+      "source":"National Archives and Records Administrationy",
+      "id": "111-SC-193551",
+      "originator": "unknown"
+    },
+    "title": "Private Ware applies last second make-up to Private Plaudo in England June 1944.",
+    "localSrc": "14.jpg"
+  },
+  {
+    "id": 15,
+    "location": "Ravenoville",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"U.S. Army",
+      "id": "unknown",
+      "originator": "unknown"
+    },
+    "title": "American paratrooper James Flanagan holds a Nazi flag captured in a village.",
+    "localSrc": "15.jpg"
+  },
+  {
+    "id": 16,
+    "location": "Omaha Beach",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"Naval History and Heritage Command",
+      "id": "SC-189986",
+      "originator": "unknown"
+    },
+    "localSrc": "16.jpg"
+  },
+  {
+    "id": 17,
+    "location": "Brest",
+    "date": "unknown",
+    "origin": {
+      "source":"U.S. Army",
+      "id": "unknown",
+      "originator": "unknown"
+    },
+    "title": "General Middleton confers with General Simpson (left) and General Stroh (right) near Brest.",
+    "localSrc": "17.jpg"
+  },
+  {
+    "id": 18,
+    "location": "St. Lo Cathedral",
+    "date": "17-07-1994",
+    "origin": {
+      "source":"National Archives and Records Administration",
+      "id": "NAID 12518083",
+      "originator": "Unkown"
+    },
+    "title": "Photograph of the Flag-Draped Body of Major Thomas D. Howie on the Rubble of the St. Lo Cathedral",
+    "localSrc": "18.jpg"
+  },
+  {
+    "id": 19,
+    "localSrc": null
+  },
+  {
+    "id": 20,
+    "location": "Cheux",
+    "date": "26-06-1994",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 6017)",
+      "originator": "Laing (Sgt), No 5 Army Film & Photographic Unit"
+    },
+    "title": "An ammunition lorry of 11th Armoured Division explodes after being hit by mortar fire during",
+    "localSrc": "20.jpg"
+  },
+  {
+    "id": 21,
+    "location": "Flers",
+    "date": "17-08-1994",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/93/Challenger_and_Cromwell_tanks_Flers_Aug_1944_IWM_B_9331.jpg",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 9331)",
+      "originator": "Laing (Sgt), No 5 Army Film & Photographic Unit"
+    },
+    "title": "Challenger tank (foreground) and Cromwell tanks (background) of 2nd Northamptonshire Yeomanry, 11th Armoured Division, passing through Flers, France.",
+    "localSrc": "21.jpg"
+  },
+  {
+    "id": 22,
+    "location": "Location unknown",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 5088)",
+      "originator": "Mapham, James (Sergeant), No. 5 Army Film & Photographic Unit"
+    },
+    "title": "Troops take shelter near an M10 tank destroyer.",
+    "localSrc": "22.jpg"
+  },
+  {
+    "id": 23,
+    "location": "Location unknown",
+    "date": "11-06-1994",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Knocked_out_German_Mk_IV_tank.jpg",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 5375)",
+      "originator": "Laing (Sgt), No 5 Army Film & Photographic Unit"
+    },
+    "title": "Officers inspect a German Mk IV tank knocked out by the Durham Light Infantry.",
+    "localSrc": "23.jpg"
+  },
+  {
+    "id": 24,
+    "location": "Location unknown",
+    "date": "28-06-1994",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 6115)",
+      "originator": "Major Stewart, No 5 Army Film & Photographic Unit"
+    },
+    "title": "Men of the 8th Royal Scots move forward past a Humber scout car of 31st Tank Brigade during Operation Epsom.",
+    "localSrc": "24.jpg"
+  },
+  {
+    "id": 25,
+    "location": "Location unknown",
+    "date": "26-06-1994",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 5986)",
+      "originator": "Laing (Sgt), No 5 Army Film & Photographic Unit"
+    },
+    "title": "Men of the 10th Battalion, Highland Light Infantry advance during Operation Epsom.",
+    "localSrc": "25.jpg"
+  },
+  {
+    "id": 26,
+    "location": "Location unknown",
+    "date": "26-06-1994",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 6000)",
+      "originator": "Laing (Sgt), No 5 Army Film & Photographic Unit"
+    },
+    "title": "Men of 7th Seaforth Highlanders, 15th (Scottish) Division advancing during Operation Epsom.",
+    "localSrc": "26.jpg"
+  },
+  {
+    "id": 27,
+    "location": "Collville-sur-Mer",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"United States National Archives",
+      "id": "NWDNS-111-SC-189910",
+      "originator": "Taylor"
+    },
+    "title": "American assault troops of the 16th Infantry Regiment, injured while storming Omaha Beach, wait by the Chalk Cliffs for evacuation to a field hospital for further medical treatment.",
+    "localSrc": "27.jpg"
+  },
+  {
+    "id": 28,
+    "location": "Collville-sur-Mer",
+    "date": "08-06-1994",
+    "origin": {
+      "source":"United States Army",
+      "id": null,
+      "originator": "Taylor"
+    },
+    "title": "Men of 3rd Battalion, 16th Infantry Regiment, US 1st Infantry Division, resting at the beach at Omaha Beach near Colville-Sur-Mer.",
+    "localSrc": "28.jpg"
+  },
+  {
+    "id": 29,
+    "location": "Collville-sur-Mer",
+    "date": "08-06-1994",
+    "origin": {
+      "source":"United States National Archives",
+      "id": "SC 189935",
+      "originator": "Taylor"
+    },
+    "title": "Troops of 3rd Battalion, 16th Infantry Regiment, 1st Infantry Division assembled on Omaha Beach before moving inland near Collville-sur-Mer, 6 Jun 1944.",
+    "localSrc": "29.jpeg",
+    "nsfl": true
+  },
+  {
+    "id": 30,
+    "location": "Omaha Beach",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"United States National Archives",
+      "id": "SC 189924",
+      "originator": "Taylor"
+    },
+    "title": "Dead American soldiers of 3rd Battalion, 16th Infantry Regiment, 1st Infantry Division on Omaha Beach in Normandy, 6 Jun 1944.",
+    "localSrc": "30.jpeg",
+    "nsfl": true
+  },
+  {
+    "id": 31,
+    "location": "Queen White Beach",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 5091)",
+      "originator": "Mapham, James (Sergeant)"
+    },
+    "title": "The British 2nd Army: Infantry waiting to move off 'Queen White' Beach, SWORD Area, while under enemy fire, on the morning of 6 June.",
+    "localSrc": "31.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 32,
+    "location": "Hermanville-sur-Mer",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 5027)",
+      "originator": "Mapham, James (Sergeant)"
+    },
+    "title": "The British 2nd Army: Infantry waiting to move off 'Queen White' Beach, SWORD Area, while under enemy fire, on the morning of 6 June.",
+    "localSrc": "32.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 33,
+    "location": "Location unknown",
+    "date": "06-06-1994",
+    "origin": {
+      "source":"German Federal Archive",
+      "id": "Bild 101I-299-1805-03",
+      "originator": "Scheck"
+    },
+    "title": "Tiger I heavy tank and crew of the German 1st SS Division Leibstandarte SS Adolf Hitler in Northern France, spring 1944,",
+    "localSrc": "33.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 34,
+    "location": "Location unknown",
+    "date": "Date unkown",
+    "origin": {
+      "source":"German Federal Archive",
+      "id": "Bild 101I-299-1805-02",
+      "originator": "Scheck"
+    },
+    "title": "Tiger I heavy tank and crew of the German 1st SS Division Leibstandarte SS Adolf Hitler in Northern France, spring 1944,",
+    "localSrc": "34.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 35,
+    "location": "Location unknown",
+    "date": "07-07-2019",
+    "origin": {
+      "source":"United States Army",
+      "id": "191248",
+      "originator": "unknown"
+    },
+    "title": "General Bernard Montgomery pins the British Military Medal on the uniform on T/Sgt Philip Streczyk of the US First Division for extraordinary gallantry on Omaha Beach, Normandy, France, on D-Day. Award presented Jul 7 1944.",
+    "localSrc": "35.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 36,
+    "location": "21st Army Group HQ",
+    "date": "13-07-2019",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 7051)",
+      "originator": "Morris (Sgt), No. 5 Army Film & Photographic Unit"
+    },
+    "title": "General Montgomery with General Omar Bradley, commanding US 1st Army, at 21st Army Group HQ, where Bradley was presenting medals to British officers, 13 July.",
+    "localSrc": "36.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 37,
+    "location": "21st Army Group HQ",
+    "date": "07-07-2019",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 6551)",
+      "originator": "Morris (Sgt), No. 5 Army Film & Photographic Unit"
+    },
+    "title": "General Montgomery with Generals Patton (left) and Bradley (centre) at 21st Army Group HQ, 7 July 1944.",
+    "localSrc": "37.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 38,
+    "location": "21st Army Group HQ",
+    "date": "28-07-2019",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 8154)",
+      "originator": "Midgley, A. N. (Sergeant), No. 5 Army Film & Photographic Unit"
+    },
+    "title": "L/Cpl E Martin of the Corps of Military Police sits astride his motorcycle and chats to Cpl Joyce Collins and L/Cpl Celia Strong, members of the ATS and clerks at 21st Army Group HQ, 28 July 1944.",
+    "localSrc": "38.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 39,
+    "location": "A south coast port",
+    "date": "01-06-2019",
+    "origin": {
+      "source":"Imperial War Museum",
+      "id": "IWM (B 5150)",
+      "originator": "Laing A (Sgt), No. 5 Army Film & Photographic Unit"
+    },
+    "title": "DUKWs of a 21st Army Group RASC (Royal Army Service Corps) Beach Group company lined up ready for loading onto LSTs at a south coast port, 1 June 1944.",
+    "localSrc": "39.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 40,
+    "location": "Viller-Bocage",
+    "date": "June 1944",
+    "origin": {
+      "source":"German Federal Archive",
+      "id": "Bild 101I-738-0275-10A",
+      "originator": "Arthur Grimm"
+    },
+    "title": "Tiger I heavy tanks of the German 1st SS Division Leibstandarte SS Adolf Hitler, Viller-Bocage, France, Jun 1944.",
+    "localSrc": "40.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 41,
+    "location": "Northern France",
+    "date": "Spring 1944",
+    "origin": {
+      "source":"German Federal Archive",
+      "id": "Bild 101I-299-1805-10",
+      "originator": "Scheck"
+    },
+    "title": "Tiger I heavy tank of the German 1st SS Division Leibstandarte SS Adolf Hitler in Northern France, spring 1944.",
+    "localSrc": "41.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 42,
+    "location": "Northern France",
+    "date": "Spring 1944",
+    "origin": {
+      "source":"German Federal Archive",
+      "id": "Bild 101I-299-1805-16",
+      "originator": "Scheck"
+    },
+    "title": "Tiger I heavy tank of the German 1st SS Division Leibstandarte SS Adolf Hitler in Northern France, spring 1944.",
+    "localSrc": "42.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 43,
+    "location": "Viller-Bocage",
+    "date": "June 1944",
+    "origin": {
+      "source":"German Federal Archive",
+      "id": "Bild 101I-738-0267-18",
+      "originator": "Arthur Grimm"
+    },
+    "title": "Tiger I heavy tanks of the German 1st SS Division Leibstandarte SS Adolf Hitler, Viller-Bocage, France, Jun 1944",
+    "localSrc": "43.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 44,
+    "location": "Viller-Bocage",
+    "date": "June 1944",
+    "origin": {
+      "source":"German Federal Archive",
+      "id": "Bild 101I-738-0275-10A",
+      "originator": "Arthur Grimm"
+    },
+    "title": "Tiger I heavy tanks of the German 1st SS Division Leibstandarte SS Adolf Hitler, Viller-Bocage, France, Jun 1944",
+    "localSrc": "44.jpg",
+    "nsfl": false
+  },
+  {
+    "id": 45,
+    "location": "Viller-Bocage",
+    "date": "June 1944",
+    "origin": {
+      "source":"German Federal Archive",
+      "id": "Bild 101I-494-3376-08A",
+      "originator": "Zwirner"
+    },
+    "title": "Wrecks of German Tiger I and Panzer IV tanks, Villers-Bocage, France, Jun 1944",
+    "localSrc": "45.jpg",
+    "nsfl": false
+  },
+  {
+
   }
 ]

@@ -4,11 +4,14 @@ $alabaster: #fafafa;
 $mercury: #e6e6e6;
 $dusty: #838b91;
 $shark: #262626;
-$midnight: #003569;
-$red: #de0000;
+$midnight: rgb(0, 35, 149);
+$red: rgb(173, 27, 27);
+$sky: rgb(32, 142, 201);
 
 $white: #fff;
 $black: rgb(20,21,22);
+// $black: #111111;
+$black: #1a1a1a;
 
 // Contextual colors
 // ---
@@ -21,9 +24,14 @@ $text-color-primary: $white;
 $link-color-primary: $midnight;
 $icon-color-primary: $shark;
 $border-color-primary: $mercury;
-$background-color-primary: black;
+$background-color-primary: $black;
 
 $text-color-secondary: $dusty;
 $background-color-secondary: $white;
 
-$background-color-overlay: rgba($black, 0.3);
+$background-color-overlay: rgba($black, 0.7);
+
+$unit-color-ge: $red;
+$unit-color-us: $midnight;
+$unit-color-uk: $sky;
+$unit-color-ca: $white;

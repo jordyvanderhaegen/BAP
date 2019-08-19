@@ -1,7 +1,9 @@
 <template>
   <div>
+    <NavBar />
+    <div>ello</div>
     <TimelineList />
-    <AppNavbar />
+    <!-- <AppNavbar /> -->
     <!-- <CarouselList /> -->
     <AppCarousel />
     <h1 class="year__indicator">Chapter <br>01</h1>
@@ -37,10 +39,11 @@
 
 
 <script>
-import AppNavbar from '@/components/AppNavbar.vue';
+import AppNavbar from '@/components/molecules/AppNavbar.vue';
 import AppCarousel from '@/components/AppCarousel.vue';
-import TimelineList from '@/components/TimelineList.vue';
+import TimelineList from '@/components/molecules/TimelineList.vue';
 import CarouselList from '@/components/CarouselList.vue';
+import NavBar from '@/components/molecules/NavBar.vue';
 
 export default {
   name: 'home',
@@ -49,6 +52,7 @@ export default {
     TimelineList,
     AppCarousel,
     CarouselList,
+    NavBar,
   },
 };
 </script>

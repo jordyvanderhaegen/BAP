@@ -14,37 +14,41 @@
         />
       </div>
     </div>
-    <MapElement />
   </div>
 </template>
 
 <style lang="scss">
 .l-event-detail {
   display: flex;
+
   @include to($screen-lg) {
     flex-direction: column;
   }
+
 }
 .l-event-detail__img {
   width: 45vw;
   height: 100vh;
+
   @include to($screen-lg) {
     width: 100vw;
-    height: 85vh;
+    height: 75vh;
   }
+
 }
 .l-event-detail__intro {
   width: 55vw;
+
   @include to($screen-lg) {
     width: 100vw;
   }
+
 }
 </style>
 
 <script>
 import EventImage from '@/components/molecules/EventImage.vue';
 import EventIntro from '@/components/molecules/EventIntro.vue';
-import MapElement from '@/components/atoms/MapElement.vue';
 import { mapState } from 'vuex';
 
 export default {
@@ -52,7 +56,6 @@ export default {
   components: {
     EventImage,
     EventIntro,
-    MapElement,
   },
   computed: {
     ...mapState({

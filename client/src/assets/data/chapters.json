@@ -1,23 +1,34 @@
 [
   {
+    "id": 1,
     "title": "Planning",
-    "description": "Lorem ipsum.",
-    "coverImageIndex": 1
+    "synopsis": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, placeat laudantium doloribus sed, omnis aut explicabo atque odit tenetur recusandae officia consequuntur sequi distinctio delectus molestiae. Adipisci officiis totam magnam!Laboriosam ullam eos harum nisi atque minima quidem veritatis ipsum voluptates deserunt dolor autem quae esse, velit est obcaecati, maiores provident inventore earum amet officiis rerum dolore. Non, nulla rem!",
+    "body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, placeat laudantium doloribus sed, omnis aut explicabo atque odit tenetur recusandae officia consequuntur sequi distinctio delectus molestiae. Adipisci officiis totam magnam!Laboriosam ullam eos harum nisi atque minima quidem veritatis ipsum voluptates deserunt dolor autem quae esse, velit est obcaecati, maiores provident inventore earum amet officiis rerum dolore. Non, nulla rem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, placeat laudantium doloribus sed, omnis aut explicabo atque odit tenetur recusandae officia consequuntur sequi distinctio delectus molestiae. Adipisci officiis totam magnam!Laboriosam ullam eos harum nisi atque minima quidem veritatis ipsum voluptates deserunt dolor autem quae esse, velit est obcaecati, maiores provident inventore earum amet officiis rerum dolore. Non, nulla rem!",
+    "coverImageIndex": 1,
+    "indexRange": [1, 8]
   },
   {
+    "id": 2,
     "title": "Execution",
-    "coverImageIndex": 2
+    "coverImageIndex": 2,
+    "indexRange": [9, 12]
   },
   {
+    "id": 3,
     "title": "Invasion",
-    "coverImageIndex": 3
+    "coverImageIndex": 3,
+    "indexRange": [13, 20]
   },
   {
+    "id": 4,
     "title": "Expanding",
-    "coverImageIndex": 4
+    "coverImageIndex": 4,
+    "indexRange": [21, 26]
   },
   {
+    "id": 5,
     "title": "Finalize",
-    "coverImageIndex": 5
+    "coverImageIndex": 5,
+    "indexRange": [26, 28]
   }
 ]
