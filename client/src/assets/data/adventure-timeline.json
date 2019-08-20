@@ -1,10 +1,5 @@
 [
   {
-    "type": "content",
-    "duration": 8000,
-    "refId": 1
-  },
-  {
     "type": "camera",
     "duration": 2000,
     "refId": 1

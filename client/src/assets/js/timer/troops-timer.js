@@ -5,6 +5,7 @@ import { ScatterplotLayer } from "@deck.gl/layers";
 import cameras from '@/assets/data/cameras.json'
 import * as pstimer from '@/assets/js/timer.js'
 import * as d3 from 'd3';
+import { createScatterPlotLayer } from '@/assets/js/utils.js'
 
 export class TroopsTimer extends Timer {
   constructor(duration, timeline, fps, currentFilename, nextFilename, cameraId) {
@@ -48,9 +49,9 @@ export class TroopsTimer extends Timer {
 
     this.geodataNextDate = geodataNextDate.features
     this.geodataCurrentDate = geodataCurrentDate.features.map((feature) => {
-      const {id, LN} = feature.properties
+      const {id, unit_name} = feature.properties
       const featureNextDate = geodataNextDate.features.find(feature =>
-        feature.properties.LN == LN
+        feature.properties.unit_name == unit_name
       );
       return {
         ...feature,
@@ -99,7 +100,7 @@ export class TroopsTimer extends Timer {
     })
 
     this.deck.setProps({
-      layers: this.createScatterPlotLayer(),
+      layers: createScatterPlotLayer([...this.geodataCurrentDate]),
       viewState: this.deck.viewState
     })
 
@@ -109,41 +110,6 @@ export class TroopsTimer extends Timer {
   pause = () => {
     console.log('pausing the timer')
     this.timekeeper.pause()
-  }
-
-  createScatterPlotLayer = () => {
-    // console.log('creating layer')
-    return new ScatterplotLayer({
-      id: 'scatterplot-layer',
-      data: [...this.geodataCurrentDate],
-      autoHighlight: true,
-      pickable: true,
-      radiusScale: 2,
-      radiusMinPixels: 2,
-      radiusMaxPixels: 6,
-      getPosition: d => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
-      getFillColor: d => this.getUnitColor(d.properties.UC),
-      getRadius: 1000
-    })
-  }
-
-  getUnitColor = (name) => {
-    const GER_COLOR = [173, 27, 27];
-    const ALLIED_COLOR = [0, 35, 149];
-    const UK_COLOR = [32, 142, 201];
-    const CA_COLOR = [221, 215, 215];
-    switch (name) {
-      case 'GMN':
-        return GER_COLOR;
-      case 'UK':
-        return CA_COLOR;
-      case 'CAN':
-        return UK_COLOR;
-      case 'USA':
-        return ALLIED_COLOR;
-      default:
-        return ALLIED_COLOR;
-    }
   }
 
 }
