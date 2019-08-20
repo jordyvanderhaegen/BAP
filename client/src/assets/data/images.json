@@ -546,6 +546,17 @@
     "nsfl": false
   },
   {
-
+    "id": 46,
+    "location": "Omaha beach, Normandy",
+    "date": "06-06-1994",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/NormandySupply_edit.jpg/1280px-NormandySupply_edit.jpg",
+    "origin": {
+      "source":"Naval History and Heritage Command",
+      "id": "Photograph 26-G-2517",
+      "originator": "Coast Guard"
+    },
+    "title": "LCT with barrage balloons afloat, unloading supplies on Omaha for the break-out from Normandy.",
+    "localSrc": "46.jpg",
+    "nsfl": false
   }
 ]

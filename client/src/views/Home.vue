@@ -1,58 +1,57 @@
 <template>
-  <div>
-    <NavBar />
-    <div>ello</div>
-    <TimelineList />
-    <!-- <AppNavbar /> -->
-    <!-- <CarouselList /> -->
-    <AppCarousel />
-    <h1 class="year__indicator">Chapter <br>01</h1>
-    <!-- <div class="img" /> -->
+  <div
+    class="p-home"
+    :style="{backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${require('@/assets/img/46.jpg')}) `}"
+  >
+    <div class="u-container p-home__content">
+      <h1 class="p-home__title">Landing in Normandië</h1>
+      <p class="p-home__description">Ontdek de succesvolle invasie tijdens de Tweede Wereldoorlog door de westerse geallieerden in het door Duitsland bezette West-Europa.
+        Deze operatie, verspreid over 85 dagen, toont het verloop van alle betrokken troepen. 
+        Kijk naar hoe dit verhaal ontplooit of ontdek zelf hoe verschillende troepen zich van dag tot dag verplaatsen.
+      </p>
+      <div class="p-home__actions">
+        <router-link to="/discover" class="a-btn--primary">Discover</router-link>
+        <router-link to="/adventure" class="a-btn--primary">Storytelling</router-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-.year__indicator {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  color: #838b91;
-  font-family: 'Spectral', serif;
-  font-size: rem(200px);
-  font-weight: 700;
-  z-index: 1;
-  opacity: .7;
-  z-index: layer("auto");
-}
-.img {
-  position: absolute;
-  top: 20%;
-  left: 25%;
-  background-image: url('https://www.frenchtoday.com//assets/2011/05/caen-france-ww2-story--1080x520.jpg');
+.p-home {
+  display: flex;
+  height: 100vh;
+  background-repeat: no-repeat;
   background-size: cover;
-  width: 50vw;
-  height: 50vh;
-  z-index: 3;
-  opacity: .9;
+}
+.p-home__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $white;
+}
+
+.p-home__title {
+  font-size: 5em;
+  margin-bottom: 0;
+}
+
+.p-home__description {
+  line-height: 1.9;
+  font-weight: 600;
+}
+
+.p-home__actions {
+  margin-top: rem(30px);
+  a {
+    margin-right: $space-sm;
+  }
 }
 </style>
 
 
 <script>
-import AppNavbar from '@/components/molecules/AppNavbar.vue';
-import AppCarousel from '@/components/AppCarousel.vue';
-import TimelineList from '@/components/molecules/TimelineList.vue';
-import CarouselList from '@/components/CarouselList.vue';
-import NavBar from '@/components/molecules/NavBar.vue';
-
 export default {
-  name: 'home',
-  components: {
-    AppNavbar,
-    TimelineList,
-    AppCarousel,
-    CarouselList,
-    NavBar,
-  },
+  name: "home"
 };
 </script>
