@@ -1,16 +1,15 @@
 <template>
   <div class="t-menu">
     <MenuContent/>
-    <CloseButton class="a-menu__btn" @click.native="$store.commit('ui/toggleMenu')"/>
   </div>
 </template>
 
 <style lang="scss">
 .t-menu {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: $background-color-primary;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   z-index: layer("header");

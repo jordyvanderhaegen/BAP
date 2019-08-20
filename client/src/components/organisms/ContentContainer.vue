@@ -1,6 +1,7 @@
 <template>
   <div class="o-content-container">
     <slot />
+    <Menu />
   </div>
 </template>
 
@@ -15,8 +16,12 @@
 </style>
 
 <script>
+import Menu from '@/components/templates/Menu.vue';
+
 export default {
   name: 'o-content-container',
-
+  components: {
+    Menu,
+  },
 }
 </script>
