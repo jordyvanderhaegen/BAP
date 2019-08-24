@@ -24,7 +24,7 @@
 .a-modal__description,
 .a-modal__synopsis {
   font-family: $font-family-regular;
-  font-size: rem($font-size-small);
+  font-size: .9em;
   line-height: 1.7em;
   font-weight: 300;
 }
@@ -37,7 +37,7 @@
 
 .a-modal__title {
   font-family: $font-family-headings;
-  font-size: rem(30px);
+  font-size: 2.4em;
   font-weight: 600;
   margin-bottom: 1.15rem;
 }

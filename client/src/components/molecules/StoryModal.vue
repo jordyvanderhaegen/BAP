@@ -1,10 +1,4 @@
 <template>
-  <transition
-    @before-enter="beforeEnter"
-    @enter="enter"
-    @leave="leave"
-    appear
-  >
   <ContentModal>
     <h3 class="a-modal__title">Atlantic wall.</h3>
     <p class="a-modal__synopsis">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed obcaecati in vitae laboriosam suscipit dolore nihil ut accusantium eaque cupiditate ullam necessitatibus magni, ipsa fuga doloribus ea est libero voluptate.Laudantium deleniti alias eligendi placeat nulla, dicta, totam ullam repellat doloremque inventore ab adipisci reiciendis reprehenderit, amet sint fugiat voluptate numquam? Laudantium tempora repellendus aut impedit cupiditate! Non, sequi ratione.</p>
@@ -15,7 +9,6 @@
     Doloribus culpa illo voluptates exercitationem ducimus sint. Exercitationem laboriosam voluptatibus debitis et incidunt ea dignissimos impedit facilis voluptatum reiciendis temporibus blanditiis mollitia non perferendis, at, voluptate nihil ab provident quibusdam!</p>
     <ProgressBar :duration="duration" ref="progressBar"/>
   </ContentModal>
-  </transition>
 </template>
 
 <style lang="scss">
@@ -37,16 +30,14 @@
 <script>
 import ContentModal from '@/components/molecules/ContentModal.vue';
 import ProgressBar from '@/components/molecules/ProgressBar.vue';
-import { TweenMax, TimelineMax } from 'gsap';
 import { setTimeout, setInterval } from 'timers';
 import { mapState } from 'vuex';
 
 export default {
   name: 'm-storymodal',
-  data() {
-    return {
-      animation: null,
-    };
+  components: {
+    ContentModal,
+    ProgressBar
   },
   computed: {
     ...mapState('modal', ['duration']),
@@ -61,33 +52,5 @@ export default {
       }
     }
   },
-  components: {
-    ContentModal,
-    ProgressBar
-  },
-  methods: {
-    beforeEnter(el) {
-      TweenMax.set(el, {
-        yPercent: 100,
-        opacity: 0,
-      });
-    },
-    enter(el, done) {
-      this.animation = new TimelineMax({
-        onComplete: done
-      })
-
-      this.animation.to(el, 0.8, {
-        yPercent: 0,
-        opacity: 1,
-        ease: Power4.easeOut,
-        force3D: true,
-      })
-    },
-    leave(el, done) {
-      this.animation.eventCallback("onReverseComplete", done)
-      this.animation.reverse()
-    }
-  }
 }
 </script>

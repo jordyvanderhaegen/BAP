@@ -3,7 +3,7 @@
     <NavBar />
     <ContentContainer>
       <MapContainer />
-      <StoryModal v-if="modalVisible"/>
+      <AppModal />
     </ContentContainer>
   </div>
 </template>
@@ -20,8 +20,7 @@
 import MapContainer from '@/components/molecules/MapContainer.vue';
 import NavBar from '@/components/molecules/NavBar.vue';
 import ContentContainer from '@/components/organisms/ContentContainer.vue';
-import StoryModal from '@/components/molecules/StoryModal.vue';
-import { mapState } from 'vuex';
+import AppModal from '@/components/molecules/AppModal.vue';
 
 export default {
   name: 'l-map',
@@ -29,10 +28,7 @@ export default {
     MapContainer,
     NavBar,
     ContentContainer,
-    StoryModal,
-  },
-  computed: {
-    ...mapState('modal', ['modalVisible'])
+    AppModal
   },
 }
 </script>

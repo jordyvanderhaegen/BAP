@@ -29,7 +29,7 @@ export class ContentTimer extends Timer {
    */
   run = () => {
     console.log(`Starting content timer ${this.duration}`)
-    store.commit('modal/showModal')
+    store.commit('modal/showModal', 'StoryModal')
     store.commit('modal/setDuration', this.duration)
   }
 

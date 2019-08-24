@@ -17,6 +17,10 @@ export function createScatterPlotLayer(data) {
     getPosition: d => [d.geometry.coordinates[0], d.geometry.coordinates[1]],
     getFillColor: d => getUnitColor(d.properties.unit_country),
     onHover: d => store.commit('timeline/setTooltip', {x: d.x, y: d.y, object: d.object}),
+    onClick: d => {
+      store.commit('modal/setReferenceId', 1)
+      store.commit('modal/showModal', 'UnitModal')
+    },
     getRadius: 1000
   })
 }

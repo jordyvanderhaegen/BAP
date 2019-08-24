@@ -5,6 +5,7 @@ export default {
         modalVisible: false,
         modalComponent: null,
         duration: 5000,
+        referenceId: null,
     },
 
     mutations: {
@@ -14,6 +15,9 @@ export default {
         },
         hideModal(state) {
             state.modalVisible = false;
+        },
+        setReferenceId(state, referenceId) {
+            state.referenceId = referenceId
         },
         setDuration(state, duration) {
             state.duration = duration
