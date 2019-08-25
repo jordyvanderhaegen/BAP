@@ -5,6 +5,7 @@ import chapters from '@/assets/data/chapters.json';
 const TIMELINE_PLAYING_STATE = {
   PLAYING: 'PLAYING',
   PAUSED: 'PAUSED',
+  STOPPED: 'STOPPED'
 }
 
 export default {
@@ -54,6 +55,11 @@ export default {
      */
     setTimelineFromJSON(state, filename) {
       state.timeline.setTimelineFromJSON(filename);
+    },
+
+    stopTimeline(state) {
+      state.timeline.clearTimer()
+      state.timeline = new Timeline()
     },
 
     /**

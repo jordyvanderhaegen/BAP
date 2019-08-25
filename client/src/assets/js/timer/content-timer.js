@@ -44,4 +44,9 @@ export class ContentTimer extends Timer {
     store.commit('modal/setDuration', this.duration)
   }
 
+  clear = () => {
+    clearTimeout(this.timeout)
+    store.commit('modal/hideModal')
+  }
+
 }

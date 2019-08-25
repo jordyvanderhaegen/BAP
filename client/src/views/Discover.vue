@@ -14,13 +14,16 @@ export default {
         ...mapState('timeline', ['map'])
     },
     methods: {
-        ...mapMutations('timeline', ['setTimelineFromJSON', 'playTimeline'])
+        ...mapMutations('timeline', ['setTimelineFromJSON', 'playTimeline', 'stopTimeline'])
     },
     mounted() {
         this.setTimelineFromJSON('discover-timeline')
         this.map.on("load", () => {
             this.playTimeline()
         });
+    },
+    beforeDestroy() {
+        this.stopTimeline()
     }
 }
 </script>

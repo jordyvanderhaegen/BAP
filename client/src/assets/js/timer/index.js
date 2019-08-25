@@ -1,12 +1,12 @@
 import { Timer } from './timer'
 import { ContentTimer } from './content-timer';
-import { TroopsTimer } from './troops-timer';
 import { CameraTimer } from './camera-timer';
 import { JSONTimer } from './json-timer';
 import chapters from '@/assets/data/chapters.json';
 import { ChapterTimer } from './chapter-timer';
 import { StaticDeckTimer } from './static-deck-timer';
 import store from '@/store/index.js';
+import { DynamicDeckTimer } from './dynamic-deck-timer';
 
 export class Timeline {
   constructor() {
@@ -19,6 +19,7 @@ export class Timeline {
    *
    */
   next = () => {
+    this.clearTimer()
     this.activeItemIndex++
     this.play()
   }
@@ -28,6 +29,7 @@ export class Timeline {
    *
    */
   previous = () => {
+    this.clearTimer()
     this.activeItemIndex--
     this.play()
   }
@@ -45,7 +47,11 @@ export class Timeline {
    *
    */
   play = () => {
-    if (this.activeItemIndex >= this.items.length) throw new Error('Index out of range')
+    if (this.activeItemIndex >= this.items.length || this.activeItemIndex < 0) {
+      // throw new Error('Index out of range')
+      console.warn('Index out of range, resetting')
+      this.activeItemIndex = 0
+    }
     this.getActiveTimer().start()
   }
 
@@ -104,6 +110,10 @@ export class Timeline {
     this.items.push(new Timer(duration, this))
   }
 
+  clearTimer = () => {
+    this.getActiveTimer().clear()
+  }
+
   /**
    * Add a content timer to the items list
    * @param duration
@@ -127,7 +137,7 @@ export class Timeline {
    *
    */
   addTroops = (duration, currentDate, nextDate, cameraId) => {
-    this.items.push(new TroopsTimer(duration, this, 60, currentDate, nextDate, cameraId))
+    this.items.push(new DynamicDeckTimer(duration, this, currentDate, nextDate, 60))
   }
   /**
    * Add a static deck timer to the items list

@@ -15,7 +15,7 @@ export class Timer {
   start = () => {
     this.startTime = moment()
     this.run()
-
+    
     this.timeout = setTimeout(this.timeline.next, this.duration)
   }
 
@@ -39,6 +39,10 @@ export class Timer {
 
   stop = () => {
     this.pause()
+  }
+
+  clear = () => {
+    clearTimeout(this.timeout)
   }
 
 }

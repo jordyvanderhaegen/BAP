@@ -15,7 +15,7 @@ export default {
         ...mapState('timeline', ['map']),
     },
     methods: {
-        ...mapMutations('timeline', ['setTimelineFromJSON', 'playTimeline'])
+        ...mapMutations('timeline', ['setTimelineFromJSON', 'playTimeline', 'stopTimeline'])
     },
     mounted() {
         this.setTimelineFromJSON('adventure-timeline')
@@ -23,5 +23,8 @@ export default {
             this.playTimeline()
         });
     },
+    beforeDestroy() {
+        this.stopTimeline()
+    }
 }
 </script>
